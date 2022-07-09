@@ -17,13 +17,13 @@ const Home: NextPage = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <Nav />
+      {/* <Nav /> */}
 
       <main className="main-contender">
         <section id="home">
-          <div className="container">
-            <div className="row">
-              <div className="col-12 col-sm-3 d-flex justify-content-center justify-content-sm-end py-2">
+          <div className="container mx-auto">
+            <div className="flex justify-center gap-7">
+              <div className="flex justify-end justify-content-sm-end py-2 w-1/4">
                 <Image
                   className="avatar"
                   height={140}
@@ -32,40 +32,42 @@ const Home: NextPage = () => {
                   alt="avatar"
                 />
               </div>
-              <div className="col-12 col-sm-9 d-flex align-items-center py-2">
-                <div className="ltspacing4">
-                  <h3 className="uppercase" id="name"></h3>
-                  <h5 className="uppercase">Software Engineer</h5>
+              <div className="flex items-center py-2 w-3/4">
+                <div className="tracking-widest">
+                  <h3 className="uppercase text-2xl mb-2" id="name"></h3>
+                  <h5 className="uppercase text-lg">Software Engineer</h5>
                 </div>
               </div>
             </div>
           </div>
         </section>
         <section className="py-6" id="overview">
-          <div className="container">
-            <div className="row">
-              <div className="col">
-                <h5 className="ltspacing4 uppercase text-center">Overview</h5>
-                <hr />
-                <p className="text-center">
-                  Personal development is my main goal. I'm constantly reading,
-                  improving my skills and learning something new every day.
-                </p>
-                <p className="text-center">
-                  From a young age I've always been fascinated by computers and
-                  how things worked behind the scenes. I'm also a passionate
-                  problem solver, math lover and logical person. Those qualities
-                  and traits together made me follow this developer path.
-                </p>
-              </div>
+          <div className="container mx-auto">
+            <div>
+              <h5 className="tracking-widest uppercase text-center text-xl">
+                Overview
+              </h5>
+              <hr />
+              <p className="text-center">
+                Personal development is my main goal. I'm constantly reading,
+                improving my skills and learning something new every day.
+              </p>
+              <p className="text-center">
+                From a young age I've always been fascinated by computers and
+                how things worked behind the scenes. I'm also a passionate
+                problem solver, math lover and logical person. Those qualities
+                and traits together made me follow this developer path.
+              </p>
             </div>
           </div>
         </section>
         <section className="py-6 bg-almost-white" id="skills">
-          <div className="container">
-            <div className="row">
+          <div className="container mx-auto">
+            <div className="flex">
               <div className="col">
-                <h5 className="ltspacing4 uppercase text-center">Skills</h5>
+                <h5 className="tracking-widest uppercase text-center text-xl">
+                  Skills
+                </h5>
                 <hr />
                 <p className="text-center">
                   I have a strong preference and want to expertise in front-end
@@ -76,9 +78,9 @@ const Home: NextPage = () => {
                   with SQL in general.
                 </p>
 
-                <div id="skills-car" className="row mt-5">
+                <div id="skills-car" className="flex mt-5">
                   <div id="frontend" className="col-12 text-center">
-                    <h6 className="ltspacing4">Front End</h6>
+                    <h6 className="tracking-widest">Front End</h6>
                     <div className="skills-list py-4">
                       <Image
                         src="/img/icons/react-logo.svg"
@@ -124,8 +126,8 @@ const Home: NextPage = () => {
                       />
                     </div>
                   </div>
-                  <div id="backend" className="col-12 text-center d-none">
-                    <h6 className="ltspacing4">Back End</h6>
+                  <div id="backend" className="col-12 text-center hidden">
+                    <h6 className="tracking-widest">Back End</h6>
                     <div className="skills-list py-4">
                       <Image
                         src="/img/icons/node-logo.svg"
@@ -159,8 +161,8 @@ const Home: NextPage = () => {
                       />
                     </div>
                   </div>
-                  <div id="database" className="col-12 text-center d-none">
-                    <h6 className="ltspacing4">Database</h6>
+                  <div id="database" className="col-12 text-center hidden">
+                    <h6 className="tracking-widest">Database</h6>
                     <div className="skills-list py-4">
                       <Image
                         src="/img/icons/mysql-logo.svg"
@@ -193,89 +195,89 @@ const Home: NextPage = () => {
           </div>
         </section>
         <section className="py-6" id="employment">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg">
-                <h5 className="ltspacing4 uppercase text-center">Employment</h5>
-                <hr />
-                <p className="text-center">
-                  Apart from jobs I always tend to be working on some side
-                  projects, it's due to those that I've learned some
-                  technologies like react and node. I don't normaly do open
-                  source, mainly because most of the projects I've done have
-                  some kind of commercial purpose. I have a strong preference
-                  for a remote position, they let me manage my time way more
-                  efficiently, I end up being more productive and it's also
-                  easier to keep track and maintain some of those side projects,
-                  it just fits my lifestyle better.
-                </p>
-                {EMPLOYMENT_HISTORY.map((entry) => (
-                  <div className="py-4" key={entry.company}>
-                    <div className="d-flex justify-content-between">
-                      <h6 className="uppercase">{entry.company}</h6>
-                      <h6>{entry.date}</h6>
-                    </div>
-                    <p>{entry.role}</p>
-                    <hr className="fade-2 mw100" />
+          <div className="container mx-auto">
+            <div className="w-full">
+              <h5 className="tracking-widest uppercase text-center text-xl">
+                Employment
+              </h5>
+              <hr />
+              <p className="text-center">
+                Apart from jobs I always tend to be working on some side
+                projects, it's due to those that I've learned some technologies
+                like react and node. I don't normaly do open source, mainly
+                because most of the projects I've done have some kind of
+                commercial purpose. I have a strong preference for a remote
+                position, they let me manage my time way more efficiently, I end
+                up being more productive and it's also easier to keep track and
+                maintain some of those side projects, it just fits my lifestyle
+                better.
+              </p>
+              {EMPLOYMENT_HISTORY.map((entry) => (
+                <div className="py-4" key={entry.company}>
+                  <div className="flex justify-between">
+                    <h6 className="uppercase">{entry.company}</h6>
+                    <h6>{entry.date}</h6>
                   </div>
-                ))}
-              </div>
+                  <p>{entry.role}</p>
+                  <hr className="fade-2 max-w-full" />
+                </div>
+              ))}
             </div>
           </div>
         </section>
         <section className="py-6 bg-almost-white" id="contact">
-          <div className="container">
-            <div className="row">
-              <div className="col-12 mb-3">
-                <h5 className="ltspacing4 uppercase text-center">Contact</h5>
-                <hr />
-                <form id="contact-form">
-                  <input
-                    className="mb-3 p-2"
-                    type="text"
-                    name="name"
-                    placeholder="Name"
-                    required
-                  />
-                  <input
-                    className="mb-3 p-2"
-                    type="text"
-                    name="email"
-                    placeholder="Email"
-                    required
-                  />
-                  <p className="error-message d-none text-danger">
-                    Please, enter a valid email
-                  </p>
-                  <textarea
-                    className="mb-3 p-2"
-                    name="body"
-                    placeholder="Please include any relevant details"
-                    rows={8}
-                    required
-                  ></textarea>
-                  <button className="mybtn color-white py-2 px-4" type="submit">
-                    SUBMIT
-                  </button>
-                </form>
-                <p className="form-message"></p>
-              </div>
-              <div className="col-12 d-flex flex-row justify-content-center bg-almost-white pb-3">
-                <a
-                  href="https://www.linkedin.com/in/gustavo-mauricio/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i className="fab fa-2x fa-linkedin color mx-2"></i>
-                </a>
-                <a
-                  href="https://twitter.com/gustavomwy"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i className="fab fa-2x fa-twitter color mx-2"></i>
-                </a>
-              </div>
+          <div className="container mx-auto">
+            <div className="w-full mb-3">
+              <h5 className="tracking-widest uppercase text-center text-xl">
+                Contact
+              </h5>
+              <hr />
+              <form id="contact-form">
+                <input
+                  className="mb-3 p-2"
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                  required
+                />
+                <input
+                  className="mb-3 p-2"
+                  type="text"
+                  name="email"
+                  placeholder="Email"
+                  required
+                />
+                <p className="error-message hidden text-red-500">
+                  Please, enter a valid email
+                </p>
+                <textarea
+                  className="mb-3 p-2"
+                  name="body"
+                  placeholder="Please include any relevant details"
+                  rows={8}
+                  required
+                ></textarea>
+                <button className="mybtn text-white py-2 px-4" type="submit">
+                  Submit
+                </button>
+              </form>
+              <p className="form-message"></p>
+            </div>
+            <div className="w-full flex flex-row justify-center bg-almost-white pb-3">
+              <a
+                href="https://www.linkedin.com/in/gustavo-mauricio/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fab fa-2x fa-linkedin color mx-2"></i>
+              </a>
+              <a
+                href="https://twitter.com/gustavomwy"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fab fa-2x fa-twitter color mx-2"></i>
+              </a>
             </div>
           </div>
         </section>

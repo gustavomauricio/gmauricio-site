@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @media (max-width: 992px) {
   html {
     font-size: 14px;
@@ -10,7 +14,7 @@ html {
 }
 
 body {
-  font-family: Open Sans, sans-serif;
+  font-family: Open Sans, sans-serif !important;
   background-color: #f2f4f5;
 }
 
@@ -52,8 +56,13 @@ ul {
 
 hr {
   max-width: 50px;
-  border-width: 3px;
+  border-width: 2px;
   border-color: #ff4b94;
+  margin-left: auto;
+  margin-right: auto;
+
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 a:hover {
@@ -119,22 +128,6 @@ textarea {
 
 .color-orange {
   color: #ff4b94 !important;
-}
-
-.ltspacing1 {
-  letter-spacing: 1px;
-}
-
-.ltspacing4 {
-  letter-spacing: 4px;
-}
-
-.uppercase {
-  text-transform: uppercase;
-}
-
-.mw100 {
-  max-width: 100%;
 }
 
 .fade-2 {

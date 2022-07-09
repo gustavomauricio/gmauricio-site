@@ -17,27 +17,27 @@ const Nav = () => {
       >
         <ul className="navbar-nav text-center">
           <li className="nav-item">
-            <a className="nav-link ltspacing1" href="#home">
+            <a className="nav-link tracking-wider" href="#home">
               Home
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link ltspacing1" href="#overview">
+            <a className="nav-link tracking-wider" href="#overview">
               Overview
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link ltspacing1" href="#skills">
+            <a className="nav-link tracking-wider" href="#skills">
               Skills
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link ltspacing1" href="#employment">
+            <a className="nav-link tracking-wider" href="#employment">
               Employment
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link ltspacing1" href="#contact">
+            <a className="nav-link tracking-wider" href="#contact">
               Contact
             </a>
           </li>
