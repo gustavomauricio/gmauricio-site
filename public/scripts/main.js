@@ -34,17 +34,6 @@ $(document).ready(function () {
     });
   });
 
-  // Insert letters with an interval
-  const name = "Gustavo Mauricio";
-
-  for (let i = 0; i <= name.length; i++) {
-    // Slices string from 0 to current iteration
-    let nameSlice = name.slice(0, i);
-    setTimeout(function () {
-      $("#name").html(nameSlice);
-    }, i * 80);
-  }
-
   // Adds class to nav items when scrolling respective section
   $(window).scroll(function () {
     var scroll = $(window).scrollTop();
@@ -68,38 +57,28 @@ $(document).ready(function () {
     $(".navbar-collapse").removeClass("show");
   });
 
-  // Click handler for elements with dot class (carousel)
-  $(".dot").click(function () {
-    $(".dot").removeClass("active");
-    $(this).addClass("active");
+  // $("#skills-car").swipe({
+  //   swipe: function (event, direction) {
+  //     var dots = $(".dot");
+  //     var activeDot = $(".dot.active");
+  //     var activeIndex = dots.index(activeDot);
 
-    // Get index of the clicked dot
-    var dotIndex = $(".dot").index(this);
-    currentSkill(dotIndex);
-  });
-
-  $("#skills-car").swipe({
-    swipe: function (event, direction) {
-      var dots = $(".dot");
-      var activeDot = $(".dot.active");
-      var activeIndex = dots.index(activeDot);
-
-      if (direction == "right") {
-        if (activeIndex !== 0) {
-          activeDot.removeClass("active");
-          dots.eq(activeIndex - 1).addClass("active");
-          currentSkill(activeIndex - 1);
-        }
-      } else if (direction == "left") {
-        if (activeIndex !== dots.length - 1) {
-          activeDot.removeClass("active");
-          dots.eq(activeIndex + 1).addClass("active");
-          currentSkill(activeIndex + 1);
-        }
-      }
-    },
-    allowPageScroll: "auto",
-  });
+  //     if (direction == "right") {
+  //       if (activeIndex !== 0) {
+  //         activeDot.removeClass("active");
+  //         dots.eq(activeIndex - 1).addClass("active");
+  //         currentSkill(activeIndex - 1);
+  //       }
+  //     } else if (direction == "left") {
+  //       if (activeIndex !== dots.length - 1) {
+  //         activeDot.removeClass("active");
+  //         dots.eq(activeIndex + 1).addClass("active");
+  //         currentSkill(activeIndex + 1);
+  //       }
+  //     }
+  //   },
+  //   allowPageScroll: "auto",
+  // });
 });
 
 function currentSkill(dotIndex) {

@@ -20,3 +20,5 @@ export const EMPLOYMENT_HISTORY = [
     date: "2017 - 2018",
   },
 ];
+
+export const NAME_FINAL = "Gustavo Mauricio";

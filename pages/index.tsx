@@ -1,12 +1,27 @@
+import { useEffect, useState } from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 
 import Nav from "components/Nav";
 import SubmitForm from "components/SubmitForm";
-import { EMPLOYMENT_HISTORY } from "../constants";
+import SkillsCarousel from "components/SkillsCarousel";
+import { EMPLOYMENT_HISTORY, NAME_FINAL } from "../constants";
 
 const Home: NextPage = () => {
+  const [name, setName] = useState("");
+
+  useEffect(() => {
+    for (let i = 0; i <= NAME_FINAL.length; i++) {
+      // Slices string from 0 to current iteration
+      const nameSlice = NAME_FINAL.slice(0, i);
+
+      setTimeout(function () {
+        setName(nameSlice);
+      }, i * 80);
+    }
+  }, []);
+
   return (
     <>
       <Head>
@@ -38,7 +53,9 @@ const Home: NextPage = () => {
               </div>
               <div className="flex items-center py-2 w-full sm:w-3/4">
                 <div className="tracking-widest">
-                  <h3 className="uppercase text-3xl mb-2" id="name"></h3>
+                  <h3 className="uppercase text-3xl mb-2" id="name">
+                    {name}
+                  </h3>
                   <h5 className="uppercase text-xl">Software Engineer</h5>
                 </div>
               </div>
@@ -81,118 +98,7 @@ const Home: NextPage = () => {
                   side, node and .net server side and also have some experience
                   with SQL in general.
                 </p>
-                <div id="skills-car" className="flex mt-12 flex-col">
-                  <div id="frontend" className="w-full text-center">
-                    <h6 className="tracking-widest mb-2">Front End</h6>
-                    <div className="skills-list py-6">
-                      <Image
-                        src="/img/icons/react-logo.svg"
-                        height={60}
-                        width={60}
-                        alt="react"
-                      />
-                      <Image
-                        src="/img/icons/js-logo.svg"
-                        height={60}
-                        width={60}
-                        alt="js"
-                      />
-                      <Image
-                        src="/img/icons/angular-logo.svg"
-                        height={60}
-                        width={60}
-                        alt="angular"
-                      />
-                      <Image
-                        src="/img/icons/jquery-logo.svg"
-                        height={60}
-                        width={60}
-                        alt="jquery"
-                      />
-                      <Image
-                        src="/img/icons/html-logo.svg"
-                        height={60}
-                        width={60}
-                        alt="html"
-                      />
-                      <Image
-                        src="/img/icons/css-logo.svg"
-                        height={60}
-                        width={60}
-                        alt="css"
-                      />
-                      <Image
-                        src="/img/icons/bootstrap-logo.svg"
-                        height={60}
-                        width={60}
-                        alt="bootstrap"
-                      />
-                    </div>
-                  </div>
-                  <div id="backend" className="w-full text-center hidden">
-                    <h6 className="tracking-widest mb-2">Back End</h6>
-                    <div className="skills-list py-6">
-                      <Image
-                        src="/img/icons/node-logo.svg"
-                        height={60}
-                        width={60}
-                        alt="node"
-                      />
-                      <Image
-                        src="/img/icons/express.svg"
-                        height={60}
-                        width={60}
-                        alt="express"
-                      />
-                      <Image
-                        src="/img/icons/php-logo.svg"
-                        height={60}
-                        width={60}
-                        alt="php"
-                      />
-                      <Image
-                        src="/img/icons/laravel.svg"
-                        height={60}
-                        width={60}
-                        alt="laravel"
-                      />
-                      <Image
-                        src="/img/icons/dotnet-logo.svg"
-                        height={60}
-                        width={60}
-                        alt=".net"
-                      />
-                    </div>
-                  </div>
-                  <div id="database" className="w-full text-center hidden">
-                    <h6 className="tracking-widest mb-2">Database</h6>
-                    <div className="skills-list py-6">
-                      <Image
-                        src="/img/icons/mysql-logo.svg"
-                        height={60}
-                        width={60}
-                        alt="mysql"
-                      />
-                      <Image
-                        src="/img/icons/mongodb-logo.svg"
-                        height={60}
-                        width={60}
-                        alt="mongodb"
-                      />
-                      <Image
-                        src="/img/icons/sqlserver-logo.svg"
-                        height={60}
-                        width={60}
-                        alt="sqlserver"
-                      />
-                    </div>
-                  </div>
-                  <div className="w-full text-center">
-                    <span className="dot active"></span>
-                    <span className="dot"></span>
-                    <span className="dot"></span>
-                  </div>
-                </div>
+                <SkillsCarousel />
               </div>
             </div>
           </div>
