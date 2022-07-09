@@ -1,9 +1,9 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
 
 import Nav from "components/Nav";
+import { EMPLOYMENT_HISTORY } from "../constants";
 
 const Home: NextPage = () => {
   return (
@@ -209,46 +209,16 @@ const Home: NextPage = () => {
                   easier to keep track and maintain some of those side projects,
                   it just fits my lifestyle better.
                 </p>
-                <div className="py-4">
-                  <div className="d-flex justify-content-between">
-                    <h6 className="uppercase">Diligent Corporation</h6>
-                    <h6 className="uppercase">Current</h6>
+                {EMPLOYMENT_HISTORY.map((entry) => (
+                  <div className="py-4" key={entry.company}>
+                    <div className="d-flex justify-content-between">
+                      <h6 className="uppercase">{entry.company}</h6>
+                      <h6>{entry.date}</h6>
+                    </div>
+                    <p>{entry.role}</p>
+                    <hr className="fade-2 mw100" />
                   </div>
-                  <p>Full-stack Developer</p>
-                  <hr className="fade-2 mw100" />
-                </div>
-                <div className="py-4">
-                  <div className="d-flex justify-content-between">
-                    <h6 className="uppercase">Millenium BCP</h6>
-                    <h6 className="uppercase">2019</h6>
-                  </div>
-                  <p>Full-stack Developer</p>
-                  <hr className="fade-2 mw100" />
-                </div>
-                <div className="py-4">
-                  <div className="d-flex justify-content-between">
-                    <h6 className="uppercase">Daymon Worldwide</h6>
-                    <h6 className="uppercase">2019</h6>
-                  </div>
-                  <p>Full-stack Developer</p>
-                  <hr className="fade-2 mw100" />
-                </div>
-                <div className="py-4">
-                  <div className="d-flex justify-content-between">
-                    <h6 className="uppercase">Squad IT / Viagens Abreu</h6>
-                    <h6 className="uppercase">2018</h6>
-                  </div>
-                  <p>Back-end Developer</p>
-                  <hr className="fade-2 mw100" />
-                </div>
-                <div className="py-4">
-                  <div className="d-flex justify-content-between">
-                    <h6 className="uppercase">Cook4me</h6>
-                    <h6 className="uppercase">2017</h6>
-                  </div>
-                  <p>Full-stack Developer</p>
-                  <hr className="fade-2 mw100" />
-                </div>
+                ))}
               </div>
             </div>
           </div>
@@ -299,20 +269,12 @@ const Home: NextPage = () => {
                   <i className="fab fa-2x fa-linkedin color mx-2"></i>
                 </a>
                 <a
-                  href="https://www.facebook.com/profile.php?id=100000229942264"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i className="fab fa-2x fa-facebook color mx-2"></i>
-                </a>
-                <a
                   href="https://twitter.com/gustavomwy"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <i className="fab fa-2x fa-twitter color mx-2"></i>
                 </a>
-                <i className="fab fa-2x fa-youtube color mx-2"></i>
               </div>
             </div>
           </div>
