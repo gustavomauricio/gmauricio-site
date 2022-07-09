@@ -1,8 +1,27 @@
 import React, { useState } from "react";
 import Image from "next/image";
+import { useSwipeable, LEFT, RIGHT } from "react-swipeable";
+
+const SKILL_GROUPS_COUNT = 3;
 
 const Skills = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handlers = useSwipeable({
+    onSwiped: (eventData) => {
+      const { dir } = eventData;
+
+      if (dir === RIGHT) {
+        if (currentIndex !== 0) {
+          setCurrentIndex((s) => s - 1);
+        }
+      } else if (dir === LEFT) {
+        if (currentIndex !== SKILL_GROUPS_COUNT - 1) {
+          setCurrentIndex((s) => s + 1);
+        }
+      }
+    },
+  });
 
   const contentToRender = () => {
     if (currentIndex === 0) {
@@ -123,7 +142,7 @@ const Skills = () => {
   };
 
   return (
-    <div id="skills-car" className="flex mt-12 flex-col">
+    <div id="skills-car" className="flex mt-12 flex-col" {...handlers}>
       {contentToRender()}
       <div className="w-full text-center">
         <span

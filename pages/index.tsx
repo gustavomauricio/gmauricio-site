@@ -84,23 +84,19 @@ const Home: NextPage = () => {
         </section>
         <section className="py-24 bg-gray-200" id="skills">
           <div className="container px-4 mx-auto">
-            <div className="flex">
-              <div className="col">
-                <h5 className="tracking-widest uppercase text-center text-xl">
-                  Skills
-                </h5>
-                <hr />
-                <p className="text-center">
-                  I have a strong preference and want to expertise in front-end
-                  development but I've always been kinda full stack and I think
-                  it's important to understand an entire application end to end.
-                  I've worked mostly with AngularJS and React on the client
-                  side, node and .net server side and also have some experience
-                  with SQL in general.
-                </p>
-                <SkillsCarousel />
-              </div>
-            </div>
+            <h5 className="tracking-widest uppercase text-center text-xl">
+              Skills
+            </h5>
+            <hr />
+            <p className="text-center">
+              I have a strong preference and want to expertise in front-end
+              development but I've always been kinda full stack and I think it's
+              important to understand an entire application end to end. I've
+              worked mostly with AngularJS and React on the client side, node
+              and .net server side and also have some experience with SQL in
+              general.
+            </p>
+            <SkillsCarousel />
           </div>
         </section>
         <section className="py-24" id="employment">
