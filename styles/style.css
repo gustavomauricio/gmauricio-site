@@ -35,14 +35,11 @@ h6 {
 } */
 
 hr {
-  max-width: 50px;
-  border-width: 2px;
+  max-width: 60px;
+  border: 0;
+  border-top: 2px solid;
   border-color: #ff4b94;
-  margin-left: auto;
-  margin-right: auto;
-
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin: 1rem auto;
 }
 
 a:hover {
