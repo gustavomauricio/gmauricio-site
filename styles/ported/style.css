@@ -1,0 +1,186 @@
+@media (max-width: 992px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: Open Sans, sans-serif;
+  background-color: #f2f4f5;
+}
+
+footer {
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+}
+
+#home {
+  background-image: url(/img/bg-landing.jpg);
+  background-position: bottom;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+@media screen and (min-width: 576px) {
+  #home {
+    height: 70vh;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 800;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+hr {
+  max-width: 50px;
+  border-width: 3px;
+  border-color: #ff4b94;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+input,
+textarea,
+button {
+  border: none;
+  border-radius: 10px;
+}
+
+input,
+textarea {
+  width: 100%;
+}
+
+textarea {
+  resize: none;
+}
+
+.bg-half-faded {
+  background-color: rgb(0, 0, 0, 0.5);
+}
+
+.bg-almost-white {
+  background-color: #e6e6e6;
+}
+
+.companies {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-link {
+  color: #fff !important;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 0.7rem;
+}
+
+.scrolled {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+
+.avatar {
+  max-height: 140px;
+  border-radius: 50%;
+}
+
+.mybtn {
+  color: #fff;
+  background-color: #ff4b94;
+  cursor: pointer;
+}
+
+.mybtn:disabled {
+  opacity: 0.5;
+  cursor: auto;
+}
+
+.color-orange {
+  color: #ff4b94 !important;
+}
+
+.ltspacing1 {
+  letter-spacing: 1px;
+}
+
+.ltspacing4 {
+  letter-spacing: 4px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.mw100 {
+  max-width: 100%;
+}
+
+.fade-2 {
+  opacity: 0.2;
+}
+
+/* Custom padding margin */
+
+.px-40 {
+  padding: 0 40px;
+}
+
+.py-6 {
+  padding: 6rem 0;
+}
+
+/* Skill carousel */
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+#skills-car img {
+  margin: 20px;
+}
+
+button:focus {
+  outline-color: #ff4b94;
+}
