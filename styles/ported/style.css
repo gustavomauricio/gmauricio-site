@@ -157,7 +157,7 @@ textarea {
   cursor: pointer;
   height: 15px;
   width: 15px;
-  margin: 0 2px;
+  margin: 0 6px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
@@ -175,10 +175,7 @@ textarea {
   justify-content: center;
   flex-wrap: wrap;
   margin: 0;
-}
-
-#skills-car img {
-  margin: 20px;
+  gap: 20px;
 }
 
 button:focus {

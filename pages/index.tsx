@@ -24,7 +24,13 @@ const Home: NextPage = () => {
           <div className="container">
             <div className="row">
               <div className="col-12 col-sm-3 d-flex justify-content-center justify-content-sm-end py-2">
-                <img className="avatar" src="img/gustavo.png" alt="avatar" />
+                <Image
+                  className="avatar"
+                  height={140}
+                  width={140}
+                  src="/img/gustavo.png"
+                  alt="avatar"
+                />
               </div>
               <div className="col-12 col-sm-9 d-flex align-items-center py-2">
                 <div className="ltspacing4">
@@ -74,46 +80,46 @@ const Home: NextPage = () => {
                   <div id="frontend" className="col-12 text-center">
                     <h6 className="ltspacing4">Front End</h6>
                     <div className="skills-list py-4">
-                      <img
+                      <Image
                         src="/img/icons/react-logo.svg"
-                        height="60"
-                        width="60"
+                        height={60}
+                        width={60}
                         alt="react"
                       />
-                      <img
+                      <Image
                         src="/img/icons/js-logo.svg"
-                        height="60"
-                        width="60"
+                        height={60}
+                        width={60}
                         alt="js"
                       />
-                      <img
+                      <Image
                         src="/img/icons/angular-logo.svg"
-                        height="60"
-                        width="60"
+                        height={60}
+                        width={60}
                         alt="angular"
                       />
-                      <img
+                      <Image
                         src="/img/icons/jquery-logo.svg"
-                        height="60"
-                        width="60"
+                        height={60}
+                        width={60}
                         alt="jquery"
                       />
-                      <img
+                      <Image
                         src="/img/icons/html-logo.svg"
-                        height="60"
-                        width="60"
+                        height={60}
+                        width={60}
                         alt="html"
                       />
-                      <img
+                      <Image
                         src="/img/icons/css-logo.svg"
-                        height="60"
-                        width="60"
+                        height={60}
+                        width={60}
                         alt="css"
                       />
-                      <img
+                      <Image
                         src="/img/icons/bootstrap-logo.svg"
-                        height="60"
-                        width="60"
+                        height={60}
+                        width={60}
                         alt="bootstrap"
                       />
                     </div>
@@ -121,34 +127,34 @@ const Home: NextPage = () => {
                   <div id="backend" className="col-12 text-center d-none">
                     <h6 className="ltspacing4">Back End</h6>
                     <div className="skills-list py-4">
-                      <img
+                      <Image
                         src="/img/icons/node-logo.svg"
-                        height="60"
-                        width="60"
+                        height={60}
+                        width={60}
                         alt="node"
                       />
-                      <img
+                      <Image
                         src="/img/icons/express.svg"
-                        height="60"
-                        width="60"
+                        height={60}
+                        width={60}
                         alt="express"
                       />
-                      <img
+                      <Image
                         src="/img/icons/php-logo.svg"
-                        height="60"
-                        width="60"
+                        height={60}
+                        width={60}
                         alt="php"
                       />
-                      <img
+                      <Image
                         src="/img/icons/laravel.svg"
-                        height="60"
-                        width="60"
+                        height={60}
+                        width={60}
                         alt="laravel"
                       />
-                      <img
+                      <Image
                         src="/img/icons/dotnet-logo.svg"
-                        height="60"
-                        width="60"
+                        height={60}
+                        width={60}
                         alt=".net"
                       />
                     </div>
@@ -156,22 +162,22 @@ const Home: NextPage = () => {
                   <div id="database" className="col-12 text-center d-none">
                     <h6 className="ltspacing4">Database</h6>
                     <div className="skills-list py-4">
-                      <img
+                      <Image
                         src="/img/icons/mysql-logo.svg"
-                        height="60"
-                        width="60"
+                        height={60}
+                        width={60}
                         alt="mysql"
                       />
-                      <img
+                      <Image
                         src="/img/icons/mongodb-logo.svg"
-                        height="60"
-                        width="60"
+                        height={60}
+                        width={60}
                         alt="mongodb"
                       />
-                      <img
+                      <Image
                         src="/img/icons/sqlserver-logo.svg"
-                        height="60"
-                        width="60"
+                        height={60}
+                        width={60}
                         alt="sqlserver"
                       />
                     </div>
