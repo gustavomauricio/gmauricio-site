@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @media (max-width: 992px) {
   html {
     font-size: 14px;
@@ -10,50 +14,23 @@ html {
 }
 
 body {
-  font-family: Open Sans, sans-serif;
+  font-family: Open Sans, sans-serif !important;
   background-color: #f2f4f5;
+  color: #212529;
 }
 
-footer {
-  text-align: center;
-  background-color: #000;
-  color: #fff;
-}
-
-#home {
+.home-section {
   background-image: url(/img/bg-landing.jpg);
   background-position: bottom;
   background-size: cover;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  color: #fff;
-}
-
-@media screen and (min-width: 576px) {
-  #home {
-    height: 70vh;
-  }
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 800;
-}
-
-ul {
-  list-style: none;
-  padding-left: 0;
 }
 
 hr {
-  max-width: 50px;
-  border-width: 3px;
+  max-width: 60px;
+  border: 0;
+  border-top: 2px solid;
   border-color: #ff4b94;
+  margin: 1rem auto;
 }
 
 a:hover {
@@ -61,9 +38,8 @@ a:hover {
 }
 
 input,
-textarea,
-button {
-  border: none;
+textarea {
+  border: 1px solid gray;
   border-radius: 10px;
 }
 
@@ -78,15 +54,6 @@ textarea {
 
 .bg-half-faded {
   background-color: rgb(0, 0, 0, 0.5);
-}
-
-.bg-almost-white {
-  background-color: #e6e6e6;
-}
-
-.companies {
-  display: flex;
-  justify-content: space-between;
 }
 
 .nav-link {
@@ -117,38 +84,14 @@ textarea {
   cursor: auto;
 }
 
-.color-orange {
+.color-primary {
   color: #ff4b94 !important;
-}
-
-.ltspacing1 {
-  letter-spacing: 1px;
-}
-
-.ltspacing4 {
-  letter-spacing: 4px;
-}
-
-.uppercase {
-  text-transform: uppercase;
-}
-
-.mw100 {
-  max-width: 100%;
-}
-
-.fade-2 {
-  opacity: 0.2;
 }
 
 /* Custom padding margin */
 
 .px-40 {
   padding: 0 40px;
-}
-
-.py-6 {
-  padding: 6rem 0;
 }
 
 /* Skill carousel */
