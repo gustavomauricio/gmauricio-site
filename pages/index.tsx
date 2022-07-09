@@ -3,6 +3,8 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
+import Nav from "components/Nav";
+
 const Home: NextPage = () => {
   return (
     <>
@@ -15,51 +17,9 @@ const Home: NextPage = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <nav className="navbar navbar-expand-lg navbar-dark bg-half-faded fixed-top justify-content-end">
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div
-          className="collapse navbar-collapse justify-content-center"
-          id="navbarNav"
-        >
-          <ul className="navbar-nav text-center">
-            <li className="nav-item">
-              <a className="nav-link ltspacing1" href="#home">
-                Home
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link ltspacing1" href="#overview">
-                Overview
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link ltspacing1" href="#skills">
-                Skills
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link ltspacing1" href="#employment">
-                Employment
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link ltspacing1" href="#contact">
-                Contact
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <Nav />
 
-      {/* <main className={styles.main}> */}
-      <div className="main-contender">
+      <main className="main-contender">
         <section id="home">
           <div className="container">
             <div className="row">
@@ -351,21 +311,7 @@ const Home: NextPage = () => {
             </div>
           </div>
         </section>
-      </div>
-      {/* </main> */}
-
-      {/* <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer> */}
+      </main>
 
       <footer className="py-3">
         &#169; Made by <span className="color-orange">Gustavo Mauricio</span>
