@@ -56,35 +56,4 @@ $(document).ready(function () {
   $(".nav-link").on("click", function () {
     $(".navbar-collapse").removeClass("show");
   });
-
-  // $("#skills-car").swipe({
-  //   swipe: function (event, direction) {
-  //     var dots = $(".dot");
-  //     var activeDot = $(".dot.active");
-  //     var activeIndex = dots.index(activeDot);
-
-  //     if (direction == "right") {
-  //       if (activeIndex !== 0) {
-  //         activeDot.removeClass("active");
-  //         dots.eq(activeIndex - 1).addClass("active");
-  //         currentSkill(activeIndex - 1);
-  //       }
-  //     } else if (direction == "left") {
-  //       if (activeIndex !== dots.length - 1) {
-  //         activeDot.removeClass("active");
-  //         dots.eq(activeIndex + 1).addClass("active");
-  //         currentSkill(activeIndex + 1);
-  //       }
-  //     }
-  //   },
-  //   allowPageScroll: "auto",
-  // });
 });
-
-function currentSkill(dotIndex) {
-  var children = $("#skills-car").children("[id]");
-  children.each(function (index) {
-    $(this).addClass("hidden");
-    if (index == dotIndex) $(this).removeClass("hidden");
-  });
-}
