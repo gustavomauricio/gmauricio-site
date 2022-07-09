@@ -17,13 +17,16 @@ const Home: NextPage = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      {/* <Nav /> */}
+      <Nav />
 
       <main className="main-contender">
-        <section id="home">
-          <div className="container mx-auto">
-            <div className="flex justify-center gap-7">
-              <div className="flex justify-end justify-content-sm-end py-2 w-1/4">
+        <section
+          id="home"
+          className="home-section text-white flex items-center h-screen md:h-[70vh]"
+        >
+          <div className="container px-4 mx-auto">
+            <div className="flex justify-center gap-7 flex-col md:flex-row">
+              <div className="flex justify-center py-2 w-full sm:w-1/4 sm:justify-end">
                 <Image
                   className="avatar"
                   height={140}
@@ -32,23 +35,23 @@ const Home: NextPage = () => {
                   alt="avatar"
                 />
               </div>
-              <div className="flex items-center py-2 w-3/4">
+              <div className="flex items-center py-2 w-full sm:w-3/4">
                 <div className="tracking-widest">
-                  <h3 className="uppercase text-2xl mb-2" id="name"></h3>
-                  <h5 className="uppercase text-lg">Software Engineer</h5>
+                  <h3 className="uppercase text-3xl mb-2" id="name"></h3>
+                  <h5 className="uppercase text-xl">Software Engineer</h5>
                 </div>
               </div>
             </div>
           </div>
         </section>
-        <section className="py-6" id="overview">
-          <div className="container mx-auto">
+        <section className="py-24" id="overview">
+          <div className="container px-4 mx-auto">
             <div>
               <h5 className="tracking-widest uppercase text-center text-xl">
                 Overview
               </h5>
               <hr />
-              <p className="text-center">
+              <p className="text-center mb-4">
                 Personal development is my main goal. I'm constantly reading,
                 improving my skills and learning something new every day.
               </p>
@@ -61,8 +64,8 @@ const Home: NextPage = () => {
             </div>
           </div>
         </section>
-        <section className="py-6 bg-almost-white" id="skills">
-          <div className="container mx-auto">
+        <section className="py-24 bg-gray-200" id="skills">
+          <div className="container px-4 mx-auto">
             <div className="flex">
               <div className="col">
                 <h5 className="tracking-widest uppercase text-center text-xl">
@@ -77,11 +80,10 @@ const Home: NextPage = () => {
                   side, node and .net server side and also have some experience
                   with SQL in general.
                 </p>
-
-                <div id="skills-car" className="flex mt-5">
-                  <div id="frontend" className="col-12 text-center">
-                    <h6 className="tracking-widest">Front End</h6>
-                    <div className="skills-list py-4">
+                <div id="skills-car" className="flex mt-12 flex-col">
+                  <div id="frontend" className="w-full text-center">
+                    <h6 className="tracking-widest mb-2">Front End</h6>
+                    <div className="skills-list py-6">
                       <Image
                         src="/img/icons/react-logo.svg"
                         height={60}
@@ -126,9 +128,9 @@ const Home: NextPage = () => {
                       />
                     </div>
                   </div>
-                  <div id="backend" className="col-12 text-center hidden">
-                    <h6 className="tracking-widest">Back End</h6>
-                    <div className="skills-list py-4">
+                  <div id="backend" className="w-full text-center hidden">
+                    <h6 className="tracking-widest mb-2">Back End</h6>
+                    <div className="skills-list py-6">
                       <Image
                         src="/img/icons/node-logo.svg"
                         height={60}
@@ -161,9 +163,9 @@ const Home: NextPage = () => {
                       />
                     </div>
                   </div>
-                  <div id="database" className="col-12 text-center hidden">
-                    <h6 className="tracking-widest">Database</h6>
-                    <div className="skills-list py-4">
+                  <div id="database" className="w-full text-center hidden">
+                    <h6 className="tracking-widest mb-2">Database</h6>
+                    <div className="skills-list py-6">
                       <Image
                         src="/img/icons/mysql-logo.svg"
                         height={60}
@@ -184,7 +186,7 @@ const Home: NextPage = () => {
                       />
                     </div>
                   </div>
-                  <div className="col-12 text-center">
+                  <div className="w-full text-center">
                     <span className="dot active"></span>
                     <span className="dot"></span>
                     <span className="dot"></span>
@@ -194,14 +196,14 @@ const Home: NextPage = () => {
             </div>
           </div>
         </section>
-        <section className="py-6" id="employment">
-          <div className="container mx-auto">
+        <section className="py-24" id="employment">
+          <div className="container px-4 mx-auto">
             <div className="w-full">
               <h5 className="tracking-widest uppercase text-center text-xl">
                 Employment
               </h5>
               <hr />
-              <p className="text-center">
+              <p className="text-center mb-4">
                 Apart from jobs I always tend to be working on some side
                 projects, it's due to those that I've learned some technologies
                 like react and node. I don't normaly do open source, mainly
@@ -214,19 +216,19 @@ const Home: NextPage = () => {
               </p>
               {EMPLOYMENT_HISTORY.map((entry) => (
                 <div className="py-4" key={entry.company}>
-                  <div className="flex justify-between">
+                  <div className="flex justify-between mb-2">
                     <h6 className="uppercase">{entry.company}</h6>
                     <h6>{entry.date}</h6>
                   </div>
                   <p>{entry.role}</p>
-                  <hr className="fade-2 max-w-full" />
+                  <hr className="opacity-20 max-w-full" />
                 </div>
               ))}
             </div>
           </div>
         </section>
-        <section className="py-6 bg-almost-white" id="contact">
-          <div className="container mx-auto">
+        <section className="py-24 bg-gray-200" id="contact">
+          <div className="container px-4 mx-auto">
             <div className="w-full mb-3">
               <h5 className="tracking-widest uppercase text-center text-xl">
                 Contact
@@ -263,7 +265,7 @@ const Home: NextPage = () => {
               </form>
               <p className="form-message"></p>
             </div>
-            <div className="w-full flex flex-row justify-center bg-almost-white pb-3">
+            <div className="w-full flex justify-center pb-3">
               <a
                 href="https://www.linkedin.com/in/gustavo-mauricio/"
                 target="_blank"
@@ -283,8 +285,8 @@ const Home: NextPage = () => {
         </section>
       </main>
 
-      <footer className="py-3">
-        &#169; Made by <span className="color-orange">Gustavo Mauricio</span>
+      <footer className="py-2 bg-black text-white text-center">
+        &#169; Made by <span className="color-primary">Gustavo Mauricio</span>
       </footer>
     </>
   );

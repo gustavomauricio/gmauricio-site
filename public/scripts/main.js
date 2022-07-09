@@ -51,15 +51,15 @@ $(document).ready(function () {
     $(".nav-link").each(function () {
       var href = $(this).attr("href");
       if (scroll + window.innerHeight === document.body.offsetHeight) {
-        $(".nav-link").removeClass("color-orange");
-        $("a[href*='contact']").addClass("color-orange");
+        $(".nav-link").removeClass("color-primary");
+        $("a[href*='contact']").addClass("color-primary");
       }
       if (
         scroll > $(href).offset().top - 1 &&
         scroll < $(href).offset().top + $(href).outerHeight()
       ) {
-        $(".nav-link").removeClass("color-orange");
-        $(this).addClass("color-orange");
+        $(".nav-link").removeClass("color-primary");
+        $(this).addClass("color-primary");
       }
     });
   });

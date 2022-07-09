@@ -11,6 +11,11 @@ module.exports = {
         wider: "1px",
         widest: "4px",
       },
+      colors: {
+        gray: {
+          200: "#e6e6e6",
+        },
+      },
     },
   },
   plugins: [],

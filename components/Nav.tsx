@@ -2,7 +2,7 @@ import React from "react";
 
 const Nav = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-half-faded fixed-top justify-content-end">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-half-faded fixed-top justify-end">
       <button
         className="navbar-toggler"
         type="button"
@@ -11,10 +11,7 @@ const Nav = () => {
       >
         <span className="navbar-toggler-icon"></span>
       </button>
-      <div
-        className="collapse navbar-collapse justify-content-center"
-        id="navbarNav"
-      >
+      <div className="collapse navbar-collapse justify-center" id="navbarNav">
         <ul className="navbar-nav text-center">
           <li className="nav-item">
             <a className="nav-link tracking-wider" href="#home">
