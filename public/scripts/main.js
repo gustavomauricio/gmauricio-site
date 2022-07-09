@@ -100,52 +100,6 @@ $(document).ready(function () {
     },
     allowPageScroll: "auto",
   });
-
-  $("#contact-form").submit(function (event) {
-    event.preventDefault();
-
-    var form = new FormData(event.target);
-
-    const name = form.get("name");
-    const email = form.get("email");
-    const body = form.get("body");
-
-    if (!validateEmail(email)) {
-      $(this).children(".error-message").removeClass("hidden");
-      return;
-    } else {
-      $(this).children(".error-message").addClass("hidden");
-    }
-
-    const submitButton = $(this).children("button");
-    submitButton.prop("disabled", true);
-
-    const res = fetch(
-      "https://solway-firth.netlify.app/.netlify/functions/contact",
-      {
-        method: "post",
-        body: JSON.stringify({
-          name: name,
-          email: email,
-          body: body,
-        }),
-      }
-    )
-      .then(function (response) {
-        if (response.status === 200) {
-          $("#contact-form").addClass("hidden");
-          $(".form-message").text("Thanks for reaching out!");
-        } else {
-          $(".form-message").text("Something went wrong");
-        }
-
-        submitButton.prop("disabled", false);
-      })
-      .catch(function () {
-        $(".form-message").text("Something went wrong");
-        submitButton.prop("disabled", false);
-      });
-  });
 });
 
 function currentSkill(dotIndex) {
@@ -154,10 +108,4 @@ function currentSkill(dotIndex) {
     $(this).addClass("hidden");
     if (index == dotIndex) $(this).removeClass("hidden");
   });
-}
-
-function validateEmail(email) {
-  const re =
-    /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  return re.test(email);
 }

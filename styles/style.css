@@ -25,15 +25,6 @@ body {
   background-size: cover;
 }
 
-/* h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 800;
-} */
-
 hr {
   max-width: 60px;
   border: 0;
@@ -47,9 +38,8 @@ a:hover {
 }
 
 input,
-textarea,
-button {
-  border: none;
+textarea {
+  border: 1px solid gray;
   border-radius: 10px;
 }
 

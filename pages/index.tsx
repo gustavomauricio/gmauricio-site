@@ -3,6 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 
 import Nav from "components/Nav";
+import SubmitForm from "components/SubmitForm";
 import { EMPLOYMENT_HISTORY } from "../constants";
 
 const Home: NextPage = () => {
@@ -233,37 +234,8 @@ const Home: NextPage = () => {
               <h5 className="tracking-widest uppercase text-center text-xl">
                 Contact
               </h5>
-              <hr />
-              <form id="contact-form">
-                <input
-                  className="mb-3 p-2"
-                  type="text"
-                  name="name"
-                  placeholder="Name"
-                  required
-                />
-                <input
-                  className="mb-3 p-2"
-                  type="text"
-                  name="email"
-                  placeholder="Email"
-                  required
-                />
-                <p className="error-message hidden text-red-500">
-                  Please, enter a valid email
-                </p>
-                <textarea
-                  className="mb-3 p-2"
-                  name="body"
-                  placeholder="Please include any relevant details"
-                  rows={8}
-                  required
-                ></textarea>
-                <button className="mybtn text-white py-2 px-4" type="submit">
-                  Submit
-                </button>
-              </form>
-              <p className="form-message"></p>
+              <hr className="mb-10" />
+              <SubmitForm />
             </div>
             <div className="w-full flex justify-center pb-3">
               <a
