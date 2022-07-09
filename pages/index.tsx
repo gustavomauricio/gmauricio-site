@@ -160,7 +160,7 @@ const Home: NextPage = () => {
       </main>
 
       <footer className="py-2 bg-black text-white text-center">
-        &#169; Made by <span className="color-primary">Gustavo Mauricio</span>
+        &#169; Made by <span className="text-pink-400">Gustavo Mauricio</span>
       </footer>
     </>
   );

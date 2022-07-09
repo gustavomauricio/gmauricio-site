@@ -73,17 +73,6 @@ textarea {
   border-radius: 50%;
 }
 
-.mybtn {
-  color: #fff;
-  background-color: #ff4b94;
-  cursor: pointer;
-}
-
-.mybtn:disabled {
-  opacity: 0.5;
-  cursor: auto;
-}
-
 .color-primary {
   color: #ff4b94 !important;
 }
