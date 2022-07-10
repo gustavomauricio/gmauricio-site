@@ -6,6 +6,7 @@ import Image from "next/image";
 import Nav from "components/Nav";
 import SubmitForm from "components/SubmitForm";
 import SkillsCarousel from "components/SkillsCarousel";
+import Footer from "components/Footer";
 import { EMPLOYMENT_HISTORY, NAME_FINAL } from "../constants";
 
 const Home: NextPage = () => {
@@ -70,14 +71,14 @@ const Home: NextPage = () => {
               </h5>
               <hr />
               <p className="text-center mb-4">
-                Personal development is my main goal. I'm constantly reading,
-                improving my skills and learning something new every day.
+                I'm a Fullstack Web Developer who is addicted to learning and
+                building new stuff.
               </p>
               <p className="text-center">
                 From a young age I've always been fascinated by computers and
-                how things worked behind the scenes. I'm also a passionate
-                problem solver, math lover and logical person. Those qualities
-                and traits together made me follow this developer path.
+                how things work behind the scenes. I'm also a passionate problem
+                solver, math lover and logical person. Those qualities and
+                traits together made me follow this developer journey.
               </p>
             </div>
           </div>
@@ -134,32 +135,7 @@ const Home: NextPage = () => {
         </section>
       </main>
 
-      <footer className="py-4 text-center">
-        <p className="font-semibold text-lg mb-2">@gustavommauricio</p>
-        <div className="w-full flex justify-center">
-          <a
-            href="https://www.linkedin.com/in/gustavo-mauricio/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i className="fab fa-2x fa-linkedin color mx-2"></i>
-          </a>
-          <a
-            href="https://twitter.com/gustavomwy"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i className="fab fa-2x fa-twitter color mx-2"></i>
-          </a>
-          <a
-            href="https://instagram.com/gustavommauricio"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i className="fab fa-2x fa-instagram color mx-2"></i>
-          </a>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 };
