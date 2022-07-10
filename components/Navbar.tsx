@@ -150,8 +150,8 @@ const NavbarTW = () => {
                   as="a"
                   href={item.href}
                   onClick={(e: any) => {
-                    handleAnchorClick(e, item.href, "auto");
                     close();
+                    handleAnchorClick(e, item.href);
                   }}
                   className={cn(
                     item.current
