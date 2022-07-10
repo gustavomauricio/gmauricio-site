@@ -40,14 +40,6 @@ export default function Document() {
           strategy="beforeInteractive"
           src="scripts/jquery.min.js"
         ></Script>
-        <Script
-          strategy="beforeInteractive"
-          src="scripts/smooth-scroll.min.js"
-        ></Script>
-        <Script
-          strategy="lazyOnload"
-          src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"
-        ></Script>
         <Script strategy="lazyOnload" src="scripts/bootstrap.min.js"></Script>
         <Script strategy="lazyOnload" src="scripts/main.js"></Script>
       </body>
