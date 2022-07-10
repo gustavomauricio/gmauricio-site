@@ -1,12 +1,28 @@
+import { useEffect, useState } from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 
-import Nav from "components/Nav";
+import Navbar from "components/Navbar";
 import SubmitForm from "components/SubmitForm";
-import { EMPLOYMENT_HISTORY } from "../constants";
+import SkillsCarousel from "components/SkillsCarousel";
+import Footer from "components/Footer";
+import { EMPLOYMENT_HISTORY, NAME_FINAL } from "../constants";
 
 const Home: NextPage = () => {
+  const [name, setName] = useState("");
+
+  useEffect(() => {
+    for (let i = 0; i <= NAME_FINAL.length; i++) {
+      // Slices string from 0 to current iteration
+      const nameSlice = NAME_FINAL.slice(0, i);
+
+      setTimeout(function () {
+        setName(nameSlice);
+      }, i * 80);
+    }
+  }, []);
+
   return (
     <>
       <Head>
@@ -18,7 +34,7 @@ const Home: NextPage = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <Nav />
+      <Navbar />
 
       <main className="main-contender">
         <section
@@ -38,7 +54,9 @@ const Home: NextPage = () => {
               </div>
               <div className="flex items-center py-2 w-full sm:w-3/4">
                 <div className="tracking-widest">
-                  <h3 className="uppercase text-3xl mb-2" id="name"></h3>
+                  <h3 className="uppercase text-3xl mb-2" id="name">
+                    {name}
+                  </h3>
                   <h5 className="uppercase text-xl">Software Engineer</h5>
                 </div>
               </div>
@@ -51,150 +69,35 @@ const Home: NextPage = () => {
               <h5 className="tracking-widest uppercase text-center text-xl">
                 Overview
               </h5>
-              <hr />
+              <hr className="mb-10" />
               <p className="text-center mb-4">
-                Personal development is my main goal. I'm constantly reading,
-                improving my skills and learning something new every day.
+                I'm a Fullstack Web Developer who is addicted to learning and
+                building new stuff.
               </p>
               <p className="text-center">
                 From a young age I've always been fascinated by computers and
-                how things worked behind the scenes. I'm also a passionate
-                problem solver, math lover and logical person. Those qualities
-                and traits together made me follow this developer path.
+                how things work behind the scenes. I'm also a passionate problem
+                solver, math lover and logical person. Those qualities and
+                traits together made me follow this developer journey.
               </p>
             </div>
           </div>
         </section>
         <section className="py-24 bg-gray-200" id="skills">
           <div className="container px-4 mx-auto">
-            <div className="flex">
-              <div className="col">
-                <h5 className="tracking-widest uppercase text-center text-xl">
-                  Skills
-                </h5>
-                <hr />
-                <p className="text-center">
-                  I have a strong preference and want to expertise in front-end
-                  development but I've always been kinda full stack and I think
-                  it's important to understand an entire application end to end.
-                  I've worked mostly with AngularJS and React on the client
-                  side, node and .net server side and also have some experience
-                  with SQL in general.
-                </p>
-                <div id="skills-car" className="flex mt-12 flex-col">
-                  <div id="frontend" className="w-full text-center">
-                    <h6 className="tracking-widest mb-2">Front End</h6>
-                    <div className="skills-list py-6">
-                      <Image
-                        src="/img/icons/react-logo.svg"
-                        height={60}
-                        width={60}
-                        alt="react"
-                      />
-                      <Image
-                        src="/img/icons/js-logo.svg"
-                        height={60}
-                        width={60}
-                        alt="js"
-                      />
-                      <Image
-                        src="/img/icons/angular-logo.svg"
-                        height={60}
-                        width={60}
-                        alt="angular"
-                      />
-                      <Image
-                        src="/img/icons/jquery-logo.svg"
-                        height={60}
-                        width={60}
-                        alt="jquery"
-                      />
-                      <Image
-                        src="/img/icons/html-logo.svg"
-                        height={60}
-                        width={60}
-                        alt="html"
-                      />
-                      <Image
-                        src="/img/icons/css-logo.svg"
-                        height={60}
-                        width={60}
-                        alt="css"
-                      />
-                      <Image
-                        src="/img/icons/bootstrap-logo.svg"
-                        height={60}
-                        width={60}
-                        alt="bootstrap"
-                      />
-                    </div>
-                  </div>
-                  <div id="backend" className="w-full text-center hidden">
-                    <h6 className="tracking-widest mb-2">Back End</h6>
-                    <div className="skills-list py-6">
-                      <Image
-                        src="/img/icons/node-logo.svg"
-                        height={60}
-                        width={60}
-                        alt="node"
-                      />
-                      <Image
-                        src="/img/icons/express.svg"
-                        height={60}
-                        width={60}
-                        alt="express"
-                      />
-                      <Image
-                        src="/img/icons/php-logo.svg"
-                        height={60}
-                        width={60}
-                        alt="php"
-                      />
-                      <Image
-                        src="/img/icons/laravel.svg"
-                        height={60}
-                        width={60}
-                        alt="laravel"
-                      />
-                      <Image
-                        src="/img/icons/dotnet-logo.svg"
-                        height={60}
-                        width={60}
-                        alt=".net"
-                      />
-                    </div>
-                  </div>
-                  <div id="database" className="w-full text-center hidden">
-                    <h6 className="tracking-widest mb-2">Database</h6>
-                    <div className="skills-list py-6">
-                      <Image
-                        src="/img/icons/mysql-logo.svg"
-                        height={60}
-                        width={60}
-                        alt="mysql"
-                      />
-                      <Image
-                        src="/img/icons/mongodb-logo.svg"
-                        height={60}
-                        width={60}
-                        alt="mongodb"
-                      />
-                      <Image
-                        src="/img/icons/sqlserver-logo.svg"
-                        height={60}
-                        width={60}
-                        alt="sqlserver"
-                      />
-                    </div>
-                  </div>
-                  <div className="w-full text-center">
-                    <span className="dot active"></span>
-                    <span className="dot"></span>
-                    <span className="dot"></span>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <h5 className="tracking-widest uppercase text-center text-xl">
+              Skills
+            </h5>
+            <hr className="mb-10" />
+            <p className="text-center">
+              I have a strong preference and want to expertise in front-end
+              development but I've always been kinda full stack and I think it's
+              important to understand an entire application end to end. I've
+              worked mostly with AngularJS and React on the client side, node
+              and .net server side and also have some experience with SQL in
+              general.
+            </p>
+            <SkillsCarousel />
           </div>
         </section>
         <section className="py-24" id="employment">
@@ -203,25 +106,16 @@ const Home: NextPage = () => {
               <h5 className="tracking-widest uppercase text-center text-xl">
                 Employment
               </h5>
-              <hr />
-              <p className="text-center mb-4">
-                Apart from jobs I always tend to be working on some side
-                projects, it's due to those that I've learned some technologies
-                like react and node. I don't normaly do open source, mainly
-                because most of the projects I've done have some kind of
-                commercial purpose. I have a strong preference for a remote
-                position, they let me manage my time way more efficiently, I end
-                up being more productive and it's also easier to keep track and
-                maintain some of those side projects, it just fits my lifestyle
-                better.
-              </p>
+              <hr className="mb-10" />
               {EMPLOYMENT_HISTORY.map((entry) => (
                 <div className="py-4" key={entry.company}>
-                  <div className="flex justify-between mb-2">
-                    <h6 className="uppercase">{entry.company}</h6>
-                    <h6>{entry.date}</h6>
+                  <div className="flex justify-between mb-1">
+                    <h6 className="uppercase tracking-wide font-semibold">
+                      {entry.company}
+                    </h6>
+                    <h6 className="text-sm">{entry.date}</h6>
                   </div>
-                  <p>{entry.role}</p>
+                  <p className="text-xs">{entry.role}</p>
                   <hr className="opacity-20 max-w-full" />
                 </div>
               ))}
@@ -237,29 +131,11 @@ const Home: NextPage = () => {
               <hr className="mb-10" />
               <SubmitForm />
             </div>
-            <div className="w-full flex justify-center pb-3">
-              <a
-                href="https://www.linkedin.com/in/gustavo-mauricio/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fab fa-2x fa-linkedin color mx-2"></i>
-              </a>
-              <a
-                href="https://twitter.com/gustavomwy"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fab fa-2x fa-twitter color mx-2"></i>
-              </a>
-            </div>
           </div>
         </section>
       </main>
 
-      <footer className="py-2 bg-black text-white text-center">
-        &#169; Made by <span className="color-primary">Gustavo Mauricio</span>
-      </footer>
+      <Footer />
     </>
   );
 };

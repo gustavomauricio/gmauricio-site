@@ -5,18 +5,40 @@ export const EMPLOYMENT_HISTORY = [
     date: "Current",
   },
   {
-    company: "Diligent Corporation / Fanduel",
+    company: "Pulsar Finance",
     role: "Lead Frontend Developer",
-    date: "2019 - 2022",
+    date: "2021 - 2022",
   },
   {
-    company: "Daymon Worldwide / Millenium BCP",
+    company: "Fanduel",
+    role: "Software Engineer",
+    date: "2021 - 2022",
+  },
+  {
+    company: "Diligent Corporation",
+    role: "Lead Frontend Developer",
+    date: "2019 - 2021",
+  },
+  {
+    company: "Millenium BCP",
+    role: "Frontend Developer",
+    date: "2019",
+  },
+  {
+    company: "Daymon Worldwide",
     role: "Full-stack Developer",
     date: "2018 - 2019",
   },
   {
-    company: "Cook4me / Squad IT / Viagens Abreu",
+    company: "Squad IT / Viagens Abreu",
     role: "Full-stack Developer",
     date: "2017 - 2018",
   },
+  {
+    company: "Cook4me / Squad IT / Viagens Abreu",
+    role: "Full-stack Developer",
+    date: "2017",
+  },
 ];
+
+export const NAME_FINAL = "Gustavo Mauricio";

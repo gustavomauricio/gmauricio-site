@@ -9,8 +9,14 @@ export default function Document() {
         <meta charSet="utf-8" />
         <meta name="description" content="" />
 
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
-          href="https://fonts.googleapis.com/css?family=Open+Sans"
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
           rel="stylesheet"
         />
         <link
@@ -30,20 +36,6 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
-        <Script
-          strategy="beforeInteractive"
-          src="scripts/jquery.min.js"
-        ></Script>
-        <Script
-          strategy="beforeInteractive"
-          src="scripts/smooth-scroll.min.js"
-        ></Script>
-        <Script
-          strategy="lazyOnload"
-          src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"
-        ></Script>
-        <Script strategy="lazyOnload" src="scripts/bootstrap.min.js"></Script>
-        <Script strategy="lazyOnload" src="scripts/main.js"></Script>
       </body>
     </Html>
   );

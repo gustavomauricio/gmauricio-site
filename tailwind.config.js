@@ -12,6 +12,9 @@ module.exports = {
         widest: "4px",
       },
       colors: {
+        pink: {
+          400: "#ff4b94",
+        },
         gray: {
           200: "#e6e6e6",
         },

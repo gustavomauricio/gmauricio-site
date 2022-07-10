@@ -26,11 +26,11 @@ body {
 }
 
 hr {
-  max-width: 60px;
+  max-width: 45px;
   border: 0;
   border-top: 2px solid;
   border-color: #ff4b94;
-  margin: 1rem auto;
+  margin: 0.5rem auto;
 }
 
 a:hover {
@@ -52,36 +52,9 @@ textarea {
   resize: none;
 }
 
-.bg-half-faded {
-  background-color: rgb(0, 0, 0, 0.5);
-}
-
-.nav-link {
-  color: #fff !important;
-  text-transform: uppercase;
-  font-weight: 800;
-  font-size: 0.7rem;
-}
-
-.scrolled {
-  background-color: #fff !important;
-  color: #000 !important;
-}
-
 .avatar {
   max-height: 140px;
   border-radius: 50%;
-}
-
-.mybtn {
-  color: #fff;
-  background-color: #ff4b94;
-  cursor: pointer;
-}
-
-.mybtn:disabled {
-  opacity: 0.5;
-  cursor: auto;
 }
 
 .color-primary {
