@@ -52,22 +52,6 @@ textarea {
   resize: none;
 }
 
-.bg-half-faded {
-  background-color: rgb(0, 0, 0, 0.5);
-}
-
-.nav-link {
-  color: #fff !important;
-  text-transform: uppercase;
-  font-weight: 800;
-  font-size: 0.7rem;
-}
-
-.scrolled {
-  background-color: #fff !important;
-  color: #000 !important;
-}
-
 .avatar {
   max-height: 140px;
   border-radius: 50%;

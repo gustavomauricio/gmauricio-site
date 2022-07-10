@@ -3,7 +3,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 
-import Nav from "components/Nav";
+import Navbar from "components/Navbar";
 import SubmitForm from "components/SubmitForm";
 import SkillsCarousel from "components/SkillsCarousel";
 import Footer from "components/Footer";
@@ -34,7 +34,7 @@ const Home: NextPage = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <Nav />
+      <Navbar />
 
       <main className="main-contender">
         <section

@@ -36,12 +36,6 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
-        <Script
-          strategy="beforeInteractive"
-          src="scripts/jquery.min.js"
-        ></Script>
-        <Script strategy="lazyOnload" src="scripts/bootstrap.min.js"></Script>
-        <Script strategy="lazyOnload" src="scripts/main.js"></Script>
       </body>
     </Html>
   );

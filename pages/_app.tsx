@@ -1,6 +1,5 @@
 import type { AppProps } from "next/app";
 
-import "styles/bootstrap.css";
 import "styles/style.css";
 import "styles/brand-colors.css";
 
