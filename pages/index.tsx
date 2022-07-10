@@ -69,7 +69,7 @@ const Home: NextPage = () => {
               <h5 className="tracking-widest uppercase text-center text-xl">
                 Overview
               </h5>
-              <hr />
+              <hr className="mb-10" />
               <p className="text-center mb-4">
                 I'm a Fullstack Web Developer who is addicted to learning and
                 building new stuff.
@@ -88,7 +88,7 @@ const Home: NextPage = () => {
             <h5 className="tracking-widest uppercase text-center text-xl">
               Skills
             </h5>
-            <hr />
+            <hr className="mb-10" />
             <p className="text-center">
               I have a strong preference and want to expertise in front-end
               development but I've always been kinda full stack and I think it's
@@ -106,7 +106,7 @@ const Home: NextPage = () => {
               <h5 className="tracking-widest uppercase text-center text-xl">
                 Employment
               </h5>
-              <hr />
+              <hr className="mb-10" />
               {EMPLOYMENT_HISTORY.map((entry) => (
                 <div className="py-4" key={entry.company}>
                   <div className="flex justify-between mb-1">
