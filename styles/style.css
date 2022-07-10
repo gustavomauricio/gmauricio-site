@@ -26,11 +26,11 @@ body {
 }
 
 hr {
-  max-width: 60px;
+  max-width: 45px;
   border: 0;
   border-top: 2px solid;
   border-color: #ff4b94;
-  margin: 1rem auto;
+  margin: 0.5rem auto;
 }
 
 a:hover {

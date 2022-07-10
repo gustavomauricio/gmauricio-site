@@ -106,24 +106,15 @@ const Home: NextPage = () => {
                 Employment
               </h5>
               <hr />
-              <p className="text-center mb-4">
-                Apart from jobs I always tend to be working on some side
-                projects, it's due to those that I've learned some technologies
-                like react and node. I don't normaly do open source, mainly
-                because most of the projects I've done have some kind of
-                commercial purpose. I have a strong preference for a remote
-                position, they let me manage my time way more efficiently, I end
-                up being more productive and it's also easier to keep track and
-                maintain some of those side projects, it just fits my lifestyle
-                better.
-              </p>
               {EMPLOYMENT_HISTORY.map((entry) => (
                 <div className="py-4" key={entry.company}>
-                  <div className="flex justify-between mb-2">
-                    <h6 className="uppercase">{entry.company}</h6>
-                    <h6>{entry.date}</h6>
+                  <div className="flex justify-between mb-1">
+                    <h6 className="uppercase tracking-wide font-semibold">
+                      {entry.company}
+                    </h6>
+                    <h6 className="text-sm">{entry.date}</h6>
                   </div>
-                  <p>{entry.role}</p>
+                  <p className="text-xs">{entry.role}</p>
                   <hr className="opacity-20 max-w-full" />
                 </div>
               ))}
@@ -139,28 +130,35 @@ const Home: NextPage = () => {
               <hr className="mb-10" />
               <SubmitForm />
             </div>
-            <div className="w-full flex justify-center pb-3">
-              <a
-                href="https://www.linkedin.com/in/gustavo-mauricio/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fab fa-2x fa-linkedin color mx-2"></i>
-              </a>
-              <a
-                href="https://twitter.com/gustavomwy"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fab fa-2x fa-twitter color mx-2"></i>
-              </a>
-            </div>
           </div>
         </section>
       </main>
 
-      <footer className="py-2 bg-black text-white text-center">
-        &#169; Made by <span className="text-pink-400">Gustavo Mauricio</span>
+      <footer className="py-4 text-center">
+        <p className="font-semibold text-lg mb-2">@gustavommauricio</p>
+        <div className="w-full flex justify-center">
+          <a
+            href="https://www.linkedin.com/in/gustavo-mauricio/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fab fa-2x fa-linkedin color mx-2"></i>
+          </a>
+          <a
+            href="https://twitter.com/gustavomwy"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fab fa-2x fa-twitter color mx-2"></i>
+          </a>
+          <a
+            href="https://instagram.com/gustavommauricio"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i className="fab fa-2x fa-instagram color mx-2"></i>
+          </a>
+        </div>
       </footer>
     </>
   );
