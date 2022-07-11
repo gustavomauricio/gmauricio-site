@@ -12,7 +12,7 @@ const navigationInitial = [
   { name: "Contact", href: "#contact", current: false },
 ];
 
-const NavbarTW = () => {
+const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [navigation, setNavigation] = useState(navigationInitial);
 
@@ -172,4 +172,4 @@ const NavbarTW = () => {
   );
 };
 
-export default NavbarTW;
+export default Navbar;
