@@ -41,7 +41,7 @@ const Home: NextPage = () => {
           id="home"
           className="home-section text-white flex items-center h-screen md:h-[70vh]"
         >
-          <div className="container px-4 mx-auto">
+          <div className="container max-w-6xl px-4 mx-auto">
             <div className="flex justify-center gap-7 flex-col md:flex-row">
               <div className="flex justify-center py-2 w-full sm:w-1/4 sm:justify-end">
                 <Image
@@ -64,7 +64,7 @@ const Home: NextPage = () => {
           </div>
         </section>
         <section className="py-24" id="overview">
-          <div className="container px-4 mx-auto">
+          <div className="container max-w-6xl px-4 mx-auto">
             <div>
               <h5 className="tracking-widest uppercase text-center text-xl">
                 Overview
@@ -84,7 +84,7 @@ const Home: NextPage = () => {
           </div>
         </section>
         <section className="py-24 bg-gray-200" id="skills">
-          <div className="container px-4 mx-auto">
+          <div className="container max-w-6xl px-4 mx-auto">
             <h5 className="tracking-widest uppercase text-center text-xl">
               Skills
             </h5>
@@ -101,7 +101,7 @@ const Home: NextPage = () => {
           </div>
         </section>
         <section className="py-24" id="employment">
-          <div className="container px-4 mx-auto">
+          <div className="container max-w-6xl px-4 mx-auto">
             <div className="w-full">
               <h5 className="tracking-widest uppercase text-center text-xl">
                 Employment
@@ -123,7 +123,7 @@ const Home: NextPage = () => {
           </div>
         </section>
         <section className="py-24 bg-gray-200" id="contact">
-          <div className="container px-4 mx-auto">
+          <div className="container max-w-6xl px-4 mx-auto">
             <div className="w-full mb-3">
               <h5 className="tracking-widest uppercase text-center text-xl">
                 Contact
