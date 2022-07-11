@@ -65,12 +65,6 @@ const Skills = () => {
               width={60}
               alt="css"
             />
-            <Image
-              src="/img/icons/bootstrap-logo.svg"
-              height={60}
-              width={60}
-              alt="bootstrap"
-            />
           </div>
         </div>
       );
