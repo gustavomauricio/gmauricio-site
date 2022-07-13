@@ -93,7 +93,7 @@ const SubmitForm = () => {
           onChange={(e) => setDescription(e.target.value)}
         />
         <button
-          className=" bg-pink-400 hover:bg-pink-600 disabled:cursor-auto disabled:opacity-50 cursor-pointer rounded-xl uppercase text-white py-2 px-10"
+          className=" bg-purple-blue hover:bg-purple-800 disabled:cursor-auto disabled:opacity-50 cursor-pointer rounded-xl uppercase text-white py-2 px-10 text-sm tracking-wider h-10 w-full sm:w-auto"
           type="submit"
           disabled={buttonDisabled}
         >

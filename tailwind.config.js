@@ -18,6 +18,7 @@ module.exports = {
         gray: {
           200: "#e6e6e6",
         },
+        "purple-blue": "#5643F2CC",
       },
     },
   },

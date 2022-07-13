@@ -29,7 +29,7 @@ hr {
   max-width: 45px;
   border: 0;
   border-top: 2px solid;
-  border-color: #ff4b94;
+  border-color: #5643f2cc;
   margin: 1rem auto;
 }
 
@@ -39,7 +39,6 @@ a:hover {
 
 input,
 textarea {
-  border: 1px solid gray;
   border-radius: 10px;
 }
 
@@ -55,16 +54,6 @@ textarea {
 .avatar {
   max-height: 140px;
   border-radius: 50%;
-}
-
-.color-primary {
-  color: #ff4b94 !important;
-}
-
-/* Custom padding margin */
-
-.px-40 {
-  padding: 0 40px;
 }
 
 /* Skill carousel */
@@ -92,8 +81,4 @@ textarea {
   flex-wrap: wrap;
   margin: 0;
   gap: 20px;
-}
-
-button:focus {
-  outline-color: #ff4b94;
 }
