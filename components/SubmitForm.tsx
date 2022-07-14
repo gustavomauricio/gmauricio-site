@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import cn from "classnames";
 
 const SUCCESS_MESSAGE = "Thanks for reaching out!";
 const FORM_SUBMIT_ERROR_MESSAGE = "Something went wrong";
@@ -93,7 +94,10 @@ const SubmitForm = () => {
           onChange={(e) => setDescription(e.target.value)}
         />
         <button
-          className=" bg-purple-blue hover:bg-purple-800 disabled:cursor-auto disabled:opacity-50 cursor-pointer rounded-xl uppercase text-white py-2 px-10 text-sm tracking-wider h-10 w-full sm:w-auto"
+          className={cn(
+            buttonDisabled ? "" : "hover:bg-purple-800",
+            `bg-purple-blue disabled:cursor-auto disabled:opacity-50 cursor-pointer rounded-xl uppercase text-white py-2 px-10 text-sm tracking-wider h-10 w-full sm:w-auto`
+          )}
           type="submit"
           disabled={buttonDisabled}
         >
