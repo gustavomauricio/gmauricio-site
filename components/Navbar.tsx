@@ -33,7 +33,7 @@ const Navbar = () => {
     const onScroll = (e: any) => {
       const currentScrollY = window.scrollY;
 
-      if (currentScrollY >= 60) {
+      if (currentScrollY >= 400) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -83,9 +83,9 @@ const Navbar = () => {
       as="nav"
       className={cn(
         isScrolled
-          ? "text-black bg-white"
-          : "text-white bg-black bg-opacity-70",
-        "fixed top-0 right-0 left-0 z-40"
+          ? "text-black bg-white fixed"
+          : "text-white bg-black bg-opacity-70 absolute",
+        "top-0 right-0 left-0 z-40"
       )}
     >
       {({ open, close }) => (
