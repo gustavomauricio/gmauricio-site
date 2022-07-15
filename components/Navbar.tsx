@@ -128,8 +128,8 @@ const Navbar = () => {
                         className={cn(
                           item.current
                             ? "text-pink-400"
-                            : "hover:bg-gray-700 hover:text-white",
-                          "px-3 py-2 rounded-md text-sm font-medium"
+                            : "hover:text-pink-400",
+                          "px-3 py-2 rounded-md text-sm font-medium transition-colors duration-500"
                         )}
                         aria-current={item.current ? "page" : undefined}
                       >
@@ -154,9 +154,7 @@ const Navbar = () => {
                     handleAnchorClick(e, item.href);
                   }}
                   className={cn(
-                    item.current
-                      ? "text-pink-400"
-                      : "hover:bg-gray-700 hover:text-white",
+                    item.current ? "text-pink-400" : "hover:text-pink-400",
                     "block px-3 py-2 rounded-md text-base font-medium"
                   )}
                   aria-current={item.current ? "page" : undefined}
