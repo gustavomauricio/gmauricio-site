@@ -36,10 +36,10 @@ const Home: NextPage = () => {
 
       <Navbar />
 
-      <main className="main-contender">
+      <main>
         <section
           id="home"
-          className="text-white flex items-center h-screen border-b-[1px] border-[#222] bg-gradient-to-b from-stone-900 via-cyan-900 to-black"
+          className="text-white flex items-center h-screen md:h-[70vh] bg-gradient-to-b from-stone-900 via-cyan-900 to-[#111]"
         >
           <div className="container max-w-6xl px-4 mx-auto">
             <div className="flex justify-center gap-7 flex-col md:flex-row">
@@ -95,7 +95,7 @@ const Home: NextPage = () => {
               Skills
             </h5>
             <hr className="mb-10 border-cyan-600" />
-            <p className="text-center sm:text-left">
+            <p className="text-center">
               I have a strong preference for the client-side development of an
               application, although I have always been kind of full-stack, and I
               consider it extremely important to understand an entire system end
@@ -177,6 +177,11 @@ const Home: NextPage = () => {
                 Contact
               </h5>
               <hr className="mb-10 border-cyan-600" />
+              <p className="text-center px-10 mb-8">
+                Although I’m not currently looking for any new opportunities, my
+                inbox is always open. Whether you have a question or just want
+                to say hi, I’ll try my best to get back to you!
+              </p>
               <SubmitForm />
             </div>
           </div>
