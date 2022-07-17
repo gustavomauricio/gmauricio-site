@@ -175,7 +175,7 @@ const Home: NextPage = () => {
                     <h6 className="uppercase tracking-wide font-semibold dark:text-white">
                       {entry.company}
                     </h6>
-                    <h6 className="text-sm text-white">{entry.date}</h6>
+                    <h6 className="text-sm dark:theme-white">{entry.date}</h6>
                   </div>
                   <p className="text-xs">{entry.role}</p>
                   <hr className="opacity-20 max-w-full border-[#555]" />
