@@ -12,20 +12,14 @@ body {
   font-family: Open Sans, sans-serif !important;
   -webkit-font-smoothing: antialiased;
   background-color: #f2f4f5;
-  color: #212529;
-}
-
-.home-section {
-  background-image: url(/img/bg-landing.jpg);
-  background-position: bottom;
-  background-size: cover;
+  color: #999;
 }
 
 hr {
   max-width: 45px;
   border: 0;
   border-top: 2px solid;
-  border-color: #5643f2cc;
+  border-color: #ff4b94;
   margin: 1rem auto;
 }
 

@@ -82,9 +82,8 @@ const Navbar = () => {
     <Disclosure
       as="nav"
       className={cn(
-        isScrolled
-          ? "text-black bg-white fixed"
-          : "text-white bg-black bg-opacity-70 absolute",
+        isScrolled ? "bg-[#444] fixed" : "bg-black bg-opacity-70 absolute",
+        "text-white",
         "top-0 right-0 left-0 z-40"
       )}
     >
@@ -127,8 +126,8 @@ const Navbar = () => {
                         }}
                         className={cn(
                           item.current
-                            ? "text-pink-400"
-                            : "hover:text-pink-400",
+                            ? "text-cyan-500"
+                            : "hover:text-cyan-500",
                           "px-3 py-2 rounded-md text-sm font-medium transition-colors duration-500"
                         )}
                         aria-current={item.current ? "page" : undefined}
@@ -154,7 +153,7 @@ const Navbar = () => {
                     handleAnchorClick(e, item.href);
                   }}
                   className={cn(
-                    item.current ? "text-pink-400" : "hover:text-pink-400",
+                    item.current ? "text-cyan-500" : "hover:text-cyan-500",
                     "block px-3 py-2 rounded-md text-base font-medium"
                   )}
                   aria-current={item.current ? "page" : undefined}

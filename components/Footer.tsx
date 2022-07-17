@@ -1,15 +1,16 @@
 import React from "react";
+import cn from "classnames";
 
-const Footer = () => {
+const Footer = ({ className }: { className: string }) => {
   return (
-    <footer className="py-6 text-center">
+    <footer className={cn("py-6 text-center", className)}>
       <div className="w-full flex justify-center gap-4">
         <a
           href="https://github.com/gustavomauricio"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <i className="fab fa-xl fa-github color"></i>
+          <i className="fab fa-xl fa-github"></i>
         </a>
         <a
           href="https://www.linkedin.com/in/gustavommauricio/"
