@@ -102,11 +102,11 @@ const Home: NextPage = () => {
               to end. I work mostly with React on the frontend, also built a few
               pet projects with Vue and Svelte.
             </p>
-            <ul className="grid grid-cols-2 gap-3 max-w-sm mt-10 px-4 sm:px-0 ml-auto text-[#FAFAFA]">
+            <ul className="grid grid-cols-3 gap-3 max-w-sm mt-10 px-4 sm:px-0 mx-auto text-[#FAFAFA]">
               <li>
                 <div className="flex items-center gap-2">
                   <ArrowCircleRightIcon className="text-cyan-600" height={14} />
-                  JavaScript (ES6+)
+                  JavaScript
                 </div>
               </li>
               <li>
