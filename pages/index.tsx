@@ -102,7 +102,7 @@ const Home: NextPage = () => {
               to end. I work mostly with React on the frontend, also built a few
               pet projects with Vue and Svelte.
             </p>
-            <ul className="grid grid-cols-3 gap-3 max-w-sm mt-10 px-4 sm:px-0 mx-auto text-[#FAFAFA]">
+            <ul className="grid grid-cols-3 gap-3 max-w-sm mt-12 px-4 sm:px-0 mx-auto text-[#FAFAFA]">
               <li>
                 <div className="flex items-center gap-2">
                   <ArrowCircleRightIcon className="text-cyan-600" height={14} />
@@ -177,7 +177,7 @@ const Home: NextPage = () => {
                 Contact
               </h5>
               <hr className="mb-10 border-cyan-600" />
-              <p className="text-center px-10 mb-8">
+              <p className="text-center md:px-12 mb-8">
                 Although I’m not currently looking for any new opportunities, my
                 inbox is always open. Whether you have a question or just want
                 to say hi, I’ll try my best to get back to you!
