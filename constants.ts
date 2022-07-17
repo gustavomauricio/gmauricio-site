@@ -35,7 +35,7 @@ export const EMPLOYMENT_HISTORY = [
     date: "2017 - 2018",
   },
   {
-    company: "Cook4me / Squad IT / Viagens Abreu",
+    company: "Cook4me",
     role: "Full-stack Developer",
     date: "2017",
   },

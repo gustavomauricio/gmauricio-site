@@ -56,14 +56,16 @@ const SubmitForm = () => {
     !name || !email || !description || isEmailError || isLoading;
 
   if (formMessage === SUCCESS_MESSAGE) {
-    return <p>{formMessage}</p>;
+    return (
+      <h3 className="text-lg font-bold py-10 text-center">{formMessage}</h3>
+    );
   }
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="text-black dark:text-white">
         <input
-          className="mb-3 p-2"
+          className="mb-3 p-2 bg-white dark:bg-[#333]"
           type="text"
           placeholder="Name"
           value={name}
@@ -71,7 +73,7 @@ const SubmitForm = () => {
         />
         <div className="mb-3">
           <input
-            className="p-2"
+            className="p-2 bg-white dark:bg-[#333]"
             type="text"
             placeholder="Email"
             value={email}
@@ -87,7 +89,7 @@ const SubmitForm = () => {
           )}
         </div>
         <textarea
-          className="mb-3 p-2"
+          className="mb-3 p-2 bg-white dark:bg-[#333]"
           placeholder="Please include any relevant details"
           rows={8}
           value={description}
@@ -95,13 +97,13 @@ const SubmitForm = () => {
         />
         <button
           className={cn(
-            buttonDisabled ? "" : "hover:bg-purple-800",
-            `bg-purple-blue disabled:cursor-auto disabled:opacity-50 cursor-pointer rounded-xl uppercase text-white py-2 px-10 text-sm tracking-wider h-10 w-full sm:w-auto`
+            buttonDisabled ? "" : "hover:bg-pink-700",
+            `bg-pink-400 disabled:cursor-auto disabled:opacity-50 cursor-pointer rounded-xl uppercase text-white py-2 px-10 text-sm tracking-wider h-10 w-full sm:w-auto`
           )}
           type="submit"
           disabled={buttonDisabled}
         >
-          Submit
+          Hit me up
         </button>
       </form>
       {formMessage && <p>{formMessage}</p>}
