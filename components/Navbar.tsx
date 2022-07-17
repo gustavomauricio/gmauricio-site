@@ -82,8 +82,10 @@ const Navbar = () => {
     <Disclosure
       as="nav"
       className={cn(
-        isScrolled ? "bg-[#444] fixed" : "bg-black bg-opacity-70 absolute",
-        "text-white",
+        isScrolled
+          ? "text-black bg-white dark:bg-[#444] fixed"
+          : "text-white dark:bg-black bg-opacity-70 absolute",
+        "dark:text-white",
         "top-0 right-0 left-0 z-40"
       )}
     >

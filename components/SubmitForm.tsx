@@ -56,14 +56,16 @@ const SubmitForm = () => {
     !name || !email || !description || isEmailError || isLoading;
 
   if (formMessage === SUCCESS_MESSAGE) {
-    return <p>{formMessage}</p>;
+    return (
+      <h3 className="text-lg font-bold py-10 text-center">{formMessage}</h3>
+    );
   }
 
   return (
     <>
-      <form onSubmit={handleSubmit} className="text-white">
+      <form onSubmit={handleSubmit} className="text-black dark:text-white">
         <input
-          className="mb-3 p-2 bg-[#333]"
+          className="mb-3 p-2 bg-white dark:bg-[#333]"
           type="text"
           placeholder="Name"
           value={name}
@@ -71,7 +73,7 @@ const SubmitForm = () => {
         />
         <div className="mb-3">
           <input
-            className="p-2 bg-[#333]"
+            className="p-2 bg-white dark:bg-[#333]"
             type="text"
             placeholder="Email"
             value={email}
@@ -87,7 +89,7 @@ const SubmitForm = () => {
           )}
         </div>
         <textarea
-          className="mb-3 p-2 bg-[#333]"
+          className="mb-3 p-2 bg-white dark:bg-[#333]"
           placeholder="Please include any relevant details"
           rows={8}
           value={description}

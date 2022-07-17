@@ -10,7 +10,7 @@ const Footer = ({ className }: { className: string }) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <i className="fab fa-xl fa-github"></i>
+          <i className="fab fa-xl fa-github text-black dark:text-[#999]"></i>
         </a>
         <a
           href="https://www.linkedin.com/in/gustavommauricio/"
