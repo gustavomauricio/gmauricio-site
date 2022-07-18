@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import cn from "classnames";
 
-import { Disclosure } from "@headlessui/react";
+import { Popover, Transition } from "@headlessui/react";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 
 const navigationInitial = [
@@ -33,7 +33,7 @@ const Navbar = () => {
     const onScroll = (e: any) => {
       const currentScrollY = window.scrollY;
 
-      if (currentScrollY >= 400) {
+      if (currentScrollY >= 200) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -79,30 +79,28 @@ const Navbar = () => {
   }, []);
 
   return (
-    <Disclosure
+    <Popover
       as="nav"
       className={cn(
-        isScrolled
-          ? "text-black bg-white dark:bg-[#444] fixed"
-          : "text-white dark:bg-black bg-opacity-70 absolute",
-        "dark:text-white",
-        "top-0 right-0 left-0 z-40"
+        isScrolled ? "dark:bg-[#444]" : "dark:bg-black",
+        "text-black dark:text-white bg-white ",
+        "fixed top-0 right-0 left-0 z-40 transition-colors duration-500"
       )}
     >
       {({ open, close }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
             <div className="relative flex items-center justify-between h-14">
-              <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
-                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Popover.Button className="inline-flex items-center justify-center p-2 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XIcon className="block h-6 w-6" aria-hidden="true" />
                   ) : (
                     <MenuIcon className="block h-6 w-6" aria-hidden="true" />
                   )}
-                </Disclosure.Button>
+                </Popover.Button>
               </div>
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                 {/* <div className="flex-shrink-0 flex items-center">
@@ -143,31 +141,52 @@ const Navbar = () => {
             </div>
           </div>
 
-          <Disclosure.Panel className="sm:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1">
-              {navigation.map((item) => (
-                <Disclosure.Button
-                  key={item.name}
-                  as="a"
-                  href={item.href}
-                  onClick={(e: any) => {
-                    close();
-                    handleAnchorClick(e, item.href);
-                  }}
-                  className={cn(
-                    item.current ? "text-cyan-500" : "hover:text-cyan-500",
-                    "block px-3 py-2 rounded-md text-base font-medium"
-                  )}
-                  aria-current={item.current ? "page" : undefined}
-                >
-                  {item.name}
-                </Disclosure.Button>
-              ))}
-            </div>
-          </Disclosure.Panel>
+          <Transition
+            as={React.Fragment}
+            enter="transition ease-out duration-200"
+            enterFrom="opacity-0 translate-y-1"
+            enterTo="opacity-100 translate-y-0"
+            leave="transition ease-in duration-150"
+            leaveFrom="opacity-100 translate-y-0"
+            leaveTo="opacity-0 translate-y-1"
+          >
+            <Popover.Panel
+              className={cn(
+                isScrolled ? "dark:bg-[#444] fixed" : "dark:bg-black absolute",
+                "text-black dark:text-white bg-white",
+                "sm:hidden absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+              )}
+            >
+              <div className="flex justify-end">
+                <Popover.Button className="inline-flex items-center justify-center p-2 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                  <span className="sr-only">Close menu</span>
+                  <XIcon className="block h-6 w-6" aria-hidden="true" />
+                </Popover.Button>
+              </div>
+              <div className="px-2 pt-2 pb-3 space-y-1">
+                {navigation.map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    onClick={(e: any) => {
+                      close();
+                      handleAnchorClick(e, item.href);
+                    }}
+                    className={cn(
+                      item.current ? "text-cyan-500" : "hover:text-cyan-500",
+                      "block px-3 py-2 rounded-md text-base font-medium"
+                    )}
+                    aria-current={item.current ? "page" : undefined}
+                  >
+                    {item.name}
+                  </a>
+                ))}
+              </div>
+            </Popover.Panel>
+          </Transition>
         </>
       )}
-    </Disclosure>
+    </Popover>
   );
 };
 
