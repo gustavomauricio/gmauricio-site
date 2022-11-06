@@ -65,7 +65,7 @@ const Home: NextPage = () => {
                   className="avatar"
                   height={140}
                   width={140}
-                  src="/img/gustavo.png"
+                  src="/img/profile.png"
                   alt="avatar"
                 />
               </div>
