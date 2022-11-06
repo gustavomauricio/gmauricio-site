@@ -3,6 +3,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import nodemailer from "nodemailer";
 
 const ADMIN_EMAIL = process.env.ADMIN_EMAIL;
+const SENDER_EMAIL = process.env.SENDER_EMAIL;
 const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY;
 
 type Data = {
@@ -36,7 +37,7 @@ export default async function handler(
   try {
     // send mail with defined transport object
     let info = await transporter.sendMail({
-      from: `"Contact Form" <${ADMIN_EMAIL}>`,
+      from: `"Contact Form" <${SENDER_EMAIL}>`,
       // from: '"Fred Foo 👻" <foo@example.com>', // sender address
       to: ADMIN_EMAIL, // list of receivers
       subject: "Mail from gustavommauricio.com", // Subject line
@@ -55,23 +56,4 @@ export default async function handler(
   }
 
   res.status(200).json({ msg: "Email sent!" });
-
-  // sgMail
-  //   .send(msg)
-  //   .then((res) => {
-  //     return callback(null, {
-  //       statusCode: 200,
-  //       headers: {
-  //         "Access-Control-Allow-Origin": "*",
-  //       },
-  //       body: JSON.stringify({ msg: "Email sent" }),
-  //     });
-  //   })
-  //   .catch((err) => {
-  //     console.error(err);
-  //     return callback(null, {
-  //       statusCode: 500,
-  //       body: JSON.stringify({ msg: "Failed to send email." }),
-  //     });
-  //   });
 }
