@@ -29,7 +29,7 @@ const SubmitForm = () => {
 
     setIsLoading(true);
 
-    fetch("https://solway-firth.netlify.app/.netlify/functions/contact", {
+    fetch("/api/contact", {
       method: "post",
       body: JSON.stringify({
         name: name,
