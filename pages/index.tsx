@@ -91,14 +91,18 @@ const Home: NextPage = () => {
               </h5>
               <hr className="mb-10" />
               <p className="text-center mb-4">
-                I'm a Fullstack Web Developer who is addicted to learning and
-                building new stuff.
+                As a full-stack web developer, I am constantly driven by my
+                passion for learning and creating new things.
               </p>
               <p className="text-center">
-                From a young age I've always been fascinated by computers and
-                how things work behind the scenes. I'm also a passionate problem
-                solver, math lover and logical person. Those qualities and
-                traits together made me follow this developer journey.
+                My journey began at a young age, where I was fascinated by the
+                world of computers and how they worked behind the scenes. I
+                spent countless hours tinkering and experimenting with various
+                software and hardware, always eager to uncover the mysteries
+                that lay beneath. As I grew older, my love for problem-solving,
+                mathematics, and logical thinking only grew stronger. It was
+                then that I realized that my skills and interests were perfectly
+                aligned with a career in development.
               </p>
             </div>
           </div>
@@ -112,12 +116,18 @@ const Home: NextPage = () => {
               Skills
             </h5>
             <hr className="mb-10 border-cyan-600" />
+            <p className="text-center mb-4">
+              I strongly prefer client-side development for applications,
+              although I have always been somewhat full-stack. I consider it
+              extremely important to understand an entire system end-to-end. For
+              frontend development, I mainly work with React. However, I have
+              also built a few pet projects using Vue and Svelte.
+            </p>
             <p className="text-center">
-              I have a strong preference for the client-side development of an
-              application, although I have always been kind of full-stack, and I
-              consider it extremely important to understand an entire system end
-              to end. I work mostly with React on the frontend, also built a few
-              pet projects with Vue and Svelte.
+              I believe that a well-designed and intuitive user interface is
+              crucial for any successful application. In my experience, React
+              allows me to create complex UIs with ease, while still maintaining
+              a high level of performance.
             </p>
             <ul className="grid grid-cols-3 gap-3 max-w-sm mt-12 px-4 sm:px-0 mx-auto dark:text-[#FAFAFA]">
               <li>
