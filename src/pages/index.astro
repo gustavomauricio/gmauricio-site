@@ -1,0 +1,401 @@
+---
+import "../styles/global.css";
+
+import SubmitForm from "../components/SubmitForm";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const EMPLOYMENT_HISTORY = [
+  {
+    company: "Delphi Digital",
+    role: "Frontend Developer",
+    date: "Current",
+  },
+  {
+    company: "Pulsar Finance",
+    role: "Lead Frontend Developer",
+    date: "2021 - 2022",
+  },
+  {
+    company: "Fanduel",
+    role: "Software Engineer",
+    date: "2021 - 2022",
+  },
+  {
+    company: "Diligent Corporation",
+    role: "Lead Frontend Developer",
+    date: "2019 - 2021",
+  },
+  {
+    company: "Millenium BCP",
+    role: "Frontend Developer",
+    date: "2019",
+  },
+  {
+    company: "Daymon Worldwide",
+    role: "Full-stack Developer",
+    date: "2018 - 2019",
+  },
+  {
+    company: "Squad IT / Viagens Abreu",
+    role: "Full-stack Developer",
+    date: "2017 - 2018",
+  },
+  {
+    company: "Cook4me",
+    role: "Full-stack Developer",
+    date: "2017",
+  },
+];
+---
+
+<BaseLayout>
+  <main class="dark:text-[#999] bg-[#f2f4f5] transition-all duration-500">
+    <theme-toggle>
+      <button
+        class="fixed bottom-0 right-0 -translate-x-8 -translate-y-8 bg-[#111] dark:bg-[#999] text-white dark:text-white rounded-full p-2"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-8 h-8 light"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+          ></path>
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-8 h-8 dark"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"
+          ></path>
+        </svg>
+      </button>
+    </theme-toggle>
+    <section
+      id="home"
+      class="text-white flex items-center h-screen md:h-[70vh] bg-gradient-to-b from-stone-900 via-cyan-900 dark:to-[#111] to-gray-200"
+    >
+      <div class="container max-w-6xl px-4 mx-auto">
+        <div class="flex justify-center gap-7 flex-col md:flex-row">
+          <div class="flex justify-center py-2 w-full sm:w-1/4 sm:justify-end">
+            <img
+              class="max-h-[140px] rounded-full"
+              height={140}
+              width={140}
+              src="/assets/profile.png"
+              alt="avatar"
+            />
+          </div>
+          <div class="flex items-center py-2 w-full sm:w-3/4">
+            <div class="tracking-widest">
+              <h3 id="name" class="uppercase text-3xl mb-2">
+                <span class="sr-only">Gustavo Mauricio</span>
+              </h3>
+              <h5 class="uppercase text-xl">Software Engineer</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="py-24 bg-gray-200 dark:bg-[#111] border-b-[1px] boder-[#888] dark:border-[#222]"
+      id="overview"
+    >
+      <div class="container max-w-6xl px-4 mx-auto">
+        <div>
+          <h5
+            class="tracking-widest uppercase text-center text-xl dark:text-white"
+          >
+            Overview
+          </h5>
+          <hr class="mb-10" />
+          <p class="text-center mb-4">
+            As a full-stack web developer, I am constantly driven by my passion
+            for learning and creating new things.
+          </p>
+          <p class="text-center">
+            My journey began at a young age, where I was fascinated by the world
+            of computers and how they worked behind the scenes. I spent
+            countless hours tinkering and experimenting with various software
+            and hardware, always eager to uncover the mysteries that lay
+            beneath. As I grew older, my love for problem-solving, mathematics,
+            and logical thinking only grew stronger. It was then that I realized
+            that my skills and interests were perfectly aligned with a career in
+            development.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section
+      class="py-24 dark:bg-black border-b-[1px] boder-[#888] dark:border-[#222]"
+      id="skills"
+    >
+      <div class="container max-w-6xl px-4 mx-auto">
+        <h5
+          class="tracking-widest uppercase text-center text-xl dark:text-white"
+        >
+          Skills
+        </h5>
+        <hr class="mb-10 border-cyan-600" />
+        <p class="text-center mb-4">
+          I strongly prefer client-side development for applications, although I
+          have always been somewhat full-stack. I consider it extremely
+          important to understand an entire system end-to-end. For frontend
+          development, I mainly work with React. However, I have also built a
+          few pet projects using Vue and Svelte.
+        </p>
+        <p class="text-center">
+          I believe that a well-designed and intuitive user interface is crucial
+          for any successful application. In my experience, React allows me to
+          create complex UIs with ease, while still maintaining a high level of
+          performance.
+        </p>
+        <ul
+          class="grid grid-cols-3 gap-3 max-w-sm mt-12 px-4 sm:px-0 mx-auto dark:text-[#FAFAFA]"
+        >
+          <li>
+            <div class="flex items-center gap-2">
+              <!-- right arrow icon -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="text-cyan-600 h-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+              Javascript
+            </div>
+          </li>
+          <li>
+            <div class="flex items-center gap-2">
+              <!-- right arrow icon -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="text-cyan-600 h-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+              React
+            </div>
+          </li>
+          <li>
+            <div class="flex items-center gap-2">
+              <!-- right arrow icon -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="text-cyan-600 h-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+              Node
+            </div>
+          </li>
+          <li>
+            <div class="flex items-center gap-2">
+              <!-- right arrow icon -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="text-cyan-600 h-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+              Nextjs
+            </div>
+          </li>
+          <li>
+            <div class="flex items-center gap-2">
+              <!-- right arrow icon -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="text-cyan-600 h-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+              Typescript
+            </div>
+          </li>
+          <li>
+            <div class="flex items-center gap-2">
+              <!-- right arrow icon -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="text-cyan-600 h-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+
+              Tailwind
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section
+      class="py-24 bg-gray-200 dark:bg-[#111] border-b-[1px] boder-[#888] dark:border-[#222]"
+      id="employment"
+    >
+      <div class="container max-w-6xl px-4 mx-auto">
+        <div class="w-full">
+          <h5
+            class="tracking-widest uppercase text-center text-xl dark:text-white"
+          >
+            Employment
+          </h5>
+          <hr class="mb-10" />
+          {
+            EMPLOYMENT_HISTORY.map((entry) => (
+              <div class="py-4">
+                <div class="flex justify-between mb-1">
+                  <h6 class="uppercase tracking-wide font-semibold dark:text-white">
+                    {entry.company}
+                  </h6>
+                  <h6 class="text-sm dark:theme-white">{entry.date}</h6>
+                </div>
+                <p class="text-xs">{entry.role}</p>
+                <hr class="opacity-20 max-w-full border-[#555]" />
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+    <section
+      class="py-24 dark:bg-black border-b-[1px] boder-[#888] dark:border-[#222]"
+      id="contact"
+    >
+      <div class="container max-w-6xl px-4 mx-auto">
+        <div class="w-full mb-3">
+          <h5
+            class="tracking-widest uppercase text-center text-xl dark:text-white"
+          >
+            Contact
+          </h5>
+          <hr class="mb-10 border-cyan-600" />
+          <p class="text-center md:px-12 mb-8">
+            Although I’m not currently looking for any new opportunities, my
+            inbox is always open. Whether you have a question or just want to
+            say hi, I’ll try my best to get back to you!
+          </p>
+          <SubmitForm client:visible />
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<script>
+  class ThemeToggle extends HTMLElement {
+    constructor() {
+      super();
+
+      const button = this.querySelector("button")!;
+
+      /** Set the theme to dark/light mode. */
+      const setTheme = (dark: boolean) => {
+        if (dark) {
+          document.documentElement.classList.add("dark");
+          document.documentElement.classList.remove("light");
+          button.querySelector(".light")?.classList.remove("hidden");
+          button.querySelector(".dark")?.classList.add("hidden");
+        } else {
+          document.documentElement.classList.add("light");
+          document.documentElement.classList.remove("dark");
+          button.querySelector(".light")?.classList.add("hidden");
+          button.querySelector(".dark")?.classList.remove("hidden");
+        }
+
+        button.setAttribute("aria-pressed", String(dark));
+      };
+
+      // Toggle the theme when a user clicks the button.
+      button.addEventListener("click", () => setTheme(!this.isDark()));
+
+      // Initialize button state to reflect current theme.
+      setTheme(this.isDark());
+    }
+
+    isDark() {
+      return document.documentElement.classList.contains("dark");
+    }
+  }
+
+  customElements.define("theme-toggle", ThemeToggle);
+
+  const nameElement = document.querySelector("#name")!;
+  const NAME_FINAL = "Gustavo Mauricio";
+
+  for (let i = 0; i <= NAME_FINAL.length; i++) {
+    // Slices string from 0 to current iteration
+    const nameSlice = NAME_FINAL.slice(0, i);
+
+    setTimeout(function () {
+      nameElement.textContent = nameSlice;
+    }, i * 80);
+  }
+</script>

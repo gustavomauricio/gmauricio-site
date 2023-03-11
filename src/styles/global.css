@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media (max-width: 992px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+body {
+  font-family: Open Sans, sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+hr {
+  max-width: 45px;
+  border: 0;
+  border-top: 2px solid;
+  border-color: #ff4b94;
+  margin: 1rem auto;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+input,
+textarea {
+  border-radius: 10px;
+}
+
+input,
+textarea {
+  width: 100%;
+}
+
+textarea {
+  resize: none;
+}
