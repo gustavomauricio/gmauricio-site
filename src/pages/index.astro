@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 
+import { Image } from "@astrojs/image/components";
 import SubmitForm from "../components/SubmitForm";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
@@ -91,12 +92,13 @@ const EMPLOYMENT_HISTORY = [
       <div class="container max-w-6xl px-4 mx-auto">
         <div class="flex justify-center gap-7 flex-col md:flex-row">
           <div class="flex justify-center py-2 w-full sm:w-1/4 sm:justify-end">
-            <img
-              class="max-h-[140px] rounded-full"
+            <Image
+              class="rounded-full"
               height={140}
               width={140}
+              format="webp"
               src="/assets/profile.png"
-              alt="avatar"
+              alt="portrait"
             />
           </div>
           <div class="flex items-center py-2 w-full sm:w-3/4">
