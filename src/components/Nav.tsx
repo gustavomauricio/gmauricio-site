@@ -11,7 +11,6 @@ const navigationInitial = [
 ];
 
 const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [navigation, setNavigation] = useState(navigationInitial);
 
   const handleAnchorClick = (
@@ -31,14 +30,11 @@ const Navbar = () => {
     const onScroll = (e: any) => {
       const currentScrollY = window.scrollY;
 
-      if (currentScrollY >= 200) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-
       // scroll is at the bottom
-      if (currentScrollY + window.innerHeight === document.body.offsetHeight) {
+      if (
+        currentScrollY + window.innerHeight >
+        document.body.offsetHeight - 1
+      ) {
         setNavigation((nav) =>
           nav.map((nav) => {
             return {
@@ -80,8 +76,8 @@ const Navbar = () => {
     <Popover
       as="nav"
       className={clsx(
-        isScrolled ? "dark:bg-[#444]" : "dark:bg-black",
-        "text-black dark:text-white bg-white ",
+        "text-white bg-black/80 dark:bg-black/10",
+        "backdrop-blur-md backdrop-saturate-50 shadow-md",
         "fixed top-0 right-0 left-0 z-40 transition-colors duration-500"
       )}
     >
@@ -164,8 +160,8 @@ const Navbar = () => {
           >
             <Popover.Panel
               className={clsx(
-                isScrolled ? "dark:bg-[#444] fixed" : "dark:bg-black absolute",
-                "text-black dark:text-white bg-white",
+                "backdrop-blur-md backdrop-saturate-50 shadow-md",
+                "text-white bg-black/90",
                 "sm:hidden absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
               )}
             >
