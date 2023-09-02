@@ -3,6 +3,8 @@ import { Image } from "astro:assets";
 import SubmitForm from "../components/SubmitForm.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
+import profileImage from "../assets/profile.png";
+
 const EMPLOYMENT_HISTORY = [
   {
     company: "Delphi Digital",
@@ -57,10 +59,10 @@ const EMPLOYMENT_HISTORY = [
         <div class="flex justify-center gap-7 flex-col md:flex-row">
           <div class="flex justify-center py-2 w-full sm:w-1/4 sm:justify-end">
             <Image
-              class="rounded-full"
-              width={140}
-              height={140}
-              src="/assets/profile.png"
+              class="rounded-full w-[150px] h-[150px]"
+              width={300}
+              height={300}
+              src={profileImage}
               alt="portrait"
               loading="eager"
             />
